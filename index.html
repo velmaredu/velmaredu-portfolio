@@ -3,8 +3,10 @@
 
 <head>
     <title>Mi Currículum</title>
-    <!-- <link href="index.css" rel="stylesheet" type="text/css"> -->
-    <style>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- <style>
         /* Estilos para el encabezado */
         header {
             background-color: #3498db;
@@ -66,13 +68,13 @@
         .right-col {
             width: 75%;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
     <div class="container">
         <div class="left-col">
-            <img src="image.jpg" alt="Foto de perfil">
+            <!-- <img src="image.jpg" alt="Foto de perfil"> -->
             <div>
                 <h3>Medios de contacto</h3>
                 <p>Email: ejemplo@ejemplo.com</p>
@@ -93,10 +95,10 @@
             <div class="experience">
                 <h2>Experiencia</h2>
                 <div class="job">
-                    <img src="logo-hart.png" alt="Logotipo de Hart">
+                    <!-- <img src="logo-hart.png" alt="Logotipo de Hart"> -->
                     <h3>Diseñador gráfico</h3>
                     <h4>Hart · Profesional independiente</h4>
-                    <p>nov. 2019 - actualidad · 3 años 3 meses</p>
+                    <p id="time-block"><span id="time-text">nov. 2019 - actualidad</span> · <span id="time-diff"></span></p>
                     <p>Hart es una empresa dedicada a la fotografía, el diseño gráfico y la creación de logotipos.
                         Creamos identidades de marca y diseñamos todo el branding mano a mano con el cliente para crear
                         una buena imagen o renovar una ya existente y aumentar el atractivo para clientes potenciales.
@@ -107,7 +109,7 @@
                 <div class="job">
                     <h3>Profesor de clases particulares</h3>
                     <h4>Autónomo</h4>
-                    <p>sept. 2022 - actualidad · 5 meses</p>
+                    <p id="time-block"><span id="time-text">sep. 2022 - actualidad</span> · <span id="time-diff"></span></p>
                     <p>Valladolid, Castilla y León, España · Híbrido</p>
                     <p>Profesor de matemáticas, física, Photoshop, Lightroom e Illustrator. Proporciono una enseñanza
                         personalizada y adaptada a las necesidades de cada alumno junto con una eficaz de resolución de
@@ -119,10 +121,10 @@
                 </div>
 
                 <div class="job">
-                    <img src="logo-gui.png" alt="Logotipo de GUI">
+                    <!-- <img src="logo-gui.png" alt="Logotipo de GUI"> -->
                     <h3>Miembro de la junta</h3>
                     <h4>Asociación Universitaria "Grupo Universitario de Informática"</h4>
-                    <p>sept. 2018 - actualidad · 4 años 5 meses</p>
+                    <p id="time-block"><span id="time-text">sep. 2018 - actualidad</span> · <span id="time-diff"></span></p>
                     <p>Valladolid, Castilla y León, España · Presencial</p>
                     <p>GUI es un grupo universitario dedicado a fomentar el aprendizaje y el desarrollo de habilidades
                         en el campo de la informática. Ofrecemos un ambiente colaborativo y de apoyo para estudiantes
@@ -134,8 +136,6 @@
                         miembros del grupo a alcanzar sus metas y objetivos en la carrera de informática.</p>
                     <p>Aptitudes: Liderazgo · Mentoría · Trabajo colaborativo · Comunicación · Informática</p>
                 </div>
-
-
 
             </div>
         </div>
