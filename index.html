@@ -1,145 +1,226 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <title>Mi Currículum</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
-    <script src="index.js"></script>
+    <title>Eduardo Velasco | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="eduardo, eduardo velasco, eduardo velasco martinez, portfolio, computer engineer, software developer, full-stack, front-end, back-end" />
+    <meta name="description" content="Welcome to Eduardo's Portfolio" />
+
+    <!-- Styles -->
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/7e7bf23942.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <!-- <style>
-        /* Estilos para el encabezado */
-        header {
-            background-color: #3498db;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
 
-        /* Estilos para el menú */
-        nav {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            margin: 10px;
-        }
-
-        nav a:hover {
-            background-color: #34495e;
-        }
-
-        /* Estilos para el contenido principal */
-        main {
-            background-color: #ecf0f1;
-            padding: 20px;
-        }
-
-        /* Estilos para el pie de página */
-        footer {
-            background-color: #34495e;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
-    <style>
-        /* Estilos CSS para el diseño */
-        .container {
-            display: flex;
-        }
-
-        .left-col {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .left-col img {
-            width: 100%;
-        }
-
-        .right-col {
-            width: 75%;
-        }
-    </style> -->
 </head>
 
 <body>
-    <div class="container">
-        <div class="left-col">
-            <!-- <img src="image.jpg" alt="Foto de perfil"> -->
-            <div>
-                <h3>Medios de contacto</h3>
-                <p>Email: ejemplo@ejemplo.com</p>
-                <p>Teléfono: +1 (555) 555-5555</p>
-                <p>Dirección: 1234 Calle Ejemplo, Ciudad Ejemplo</p>
+    <header>
+        <a href="/" class="logo"><i class="fa-solid fa-circle-user"></i>Eduardo Velasco</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" id="scroll-to-home">Home</a></li>
+                <li><a id="scroll-to-about">About</a></li>
+                <li><a id="scroll-to-skills">Skills</a></li>
+                <li><a id="scroll-to-education">Education</a></li>
+                <li><a id="scroll-to-work">Work</a></li>
+                <li><a id="scroll-to-experience">Experience</a></li>
+                <li><a id="scroll-to-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- hero section starts -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h2>Hi There,<br /> I am <span>Eduardo Velasco</span></h2>
+            <p>I am into <span class="typing-text"></span></p>
+            <a class="btn dark-blue" id="scroll-to-about">About Me<i class="fas fa-arrow-circle-down"></i></a>
+            <div class="socials">
+                <ul class="social-icons">
+                    <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/velmaredu"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a class="gmail" aria-label="Gmail" href="mailto:velmaredu@gmail.com" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></i></a></li>
+                    <li><a class="github" aria-label="GitHub" href="https://github.com/velmaredu" target="_blank"><i
+                                class="fab fa-github"></i></a></li>
+                </ul>
             </div>
         </div>
-        <div class="right-col">
-            <!-- Contenido del currículum, como información personal, educación y experiencia laboral -->
-            <div class="about">
-                <h2>Acerca de</h2>
-                <p>Soy un joven apasionado por el mundo de la tecnología, en concreto la informática. No solo el
-                    apartado de programación sino también el de diseño de proyectos para su posterior realización.
-                    También me apasiona la edición de imagen en la cual he realizado gran cantidad de cursos y tengo
-                    bastantes conocimientos sobre el tema.</p>
-                <p>Actualmente estoy cursando mi último año de Ingeniería Informática.</p>
+        <img draggable="false" src="./assets/images/profile.png" alt="">
+    </section>
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+        <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+        <div class="row">
+            <div class="image">
+                <img draggable="false" class="tilt" src="./assets/images/profile.png" alt="">
             </div>
-            <div class="experience">
-                <h2>Experiencia</h2>
-                <div class="job">
-                    <!-- <img src="logo-hart.png" alt="Logotipo de Hart"> -->
-                    <h3>Diseñador gráfico</h3>
-                    <h4>Hart · Profesional independiente</h4>
-                    <p id="time-block"><span id="time-text">nov. 2019 - actualidad</span> · <span id="time-diff"></span></p>
-                    <p>Hart es una empresa dedicada a la fotografía, el diseño gráfico y la creación de logotipos.
-                        Creamos identidades de marca y diseñamos todo el branding mano a mano con el cliente para crear
-                        una buena imagen o renovar una ya existente y aumentar el atractivo para clientes potenciales.
-                    </p>
-                    <p>Aptitudes: Creatividad · Atención al detalle · Adobe Photoshop · Adobe Illustrator · Adobe
-                        Lightroom</p>
-                </div>
-                <div class="job">
-                    <h3>Profesor de clases particulares</h3>
-                    <h4>Autónomo</h4>
-                    <p id="time-block"><span id="time-text">sep. 2022 - actualidad</span> · <span id="time-diff"></span></p>
-                    <p>Valladolid, Castilla y León, España · Híbrido</p>
-                    <p>Profesor de matemáticas, física, Photoshop, Lightroom e Illustrator. Proporciono una enseñanza
-                        personalizada y adaptada a las necesidades de cada alumno junto con una eficaz de resolución de
-                        dudas.</p>
-                    <p>Me preocupo por mantener unos estándares actualizados de formación, aprendiendo metodologías y
-                        conocimientos nuevos para ofrecer una enseñanza de calidad.</p>
-                    <p>Aptitudes: Comunicación · Resolución de problemas · Habilidades sociales · Razonamiento analítico
-                        · Facilidad de adaptación</p>
-                </div>
+            <div class="content">
+                <h3>I am Eduardo</h3>
+                <span class="tag">Computer Engineering</span>
 
-                <div class="job">
-                    <!-- <img src="logo-gui.png" alt="Logotipo de GUI"> -->
-                    <h3>Miembro de la junta</h3>
-                    <h4>Asociación Universitaria "Grupo Universitario de Informática"</h4>
-                    <p id="time-block"><span id="time-text">sep. 2018 - actualidad</span> · <span id="time-diff"></span></p>
-                    <p>Valladolid, Castilla y León, España · Presencial</p>
-                    <p>GUI es un grupo universitario dedicado a fomentar el aprendizaje y el desarrollo de habilidades
-                        en el campo de la informática. Ofrecemos un ambiente colaborativo y de apoyo para estudiantes
-                        interesados en aprender y desarrollar sus habilidades en lenguajes de programación, inteligencia
-                        artificial y desarrollo web, entre otros.</p>
-                    <p>Los miembros del grupo tienen la oportunidad de trabajar en proyectos colaborativos, participar
-                        en sesiones de enseñanza, y asistir a eventos y conferencias relacionadas con la informática.
-                        Además, contamos con un equipo de mentores y líderes de proyectos comprometidos en ayudar a los
-                        miembros del grupo a alcanzar sus metas y objetivos en la carrera de informática.</p>
-                    <p>Aptitudes: Liderazgo · Mentoría · Trabajo colaborativo · Comunicación · Informática</p>
-                </div>
+                <p>I am passionate about the world of technology, specifically computer science. Not only programming
+                    but also the design of projects for their subsequent implementation. I am also passionate about
+                    image editing.</p>
 
+                <div class="box-container">
+                    <div class="box">
+                        <p><span>Email: </span><a href="mailto:velmaredu@gmail.com">velmaredu@gmail.com</a></p>
+                        <p><span>Phone: </span>+34 679 766 286</p>
+                        <p><span>Place: </span> Valladolid, Spain</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <a href="#" class="btn dark-blue resume-btn">Resume<i class="fa-solid fa-download"></i></i></a>
+    </section>
+
+    <!-- skills section starts -->
+    <section class="skills" id="skills">
+
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> <span>Skills</span> & <span>Abilities</span></h2>
+
+        <div class="container" id="skillsContainer"></div>
+    </section>
+
+    <!-- education section starts -->
+    <section class="education" id="education">
+
+        <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+        <div class="box-container">
+
+            <a href="https://www.uva.es/">
+                <div class="box">
+                    <img draggable="false" src="./assets/images/education/logo-uva.svg" alt="">
+                    <div class="content">
+                        <h3>Bachelor of Computer Engineering</h3>
+                        <p>University of Valladolid | UVa</p>
+                        <h4>sep 2018 - jan 2023</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.lasalle.es/">
+                <div class="box">
+                    <img draggable="false" src="./assets/images/education/la-salle-logo.jpg" alt="">
+                    <div class="content">
+                        <h3>Science High School Degree</h3>
+                        <p>La Salle</p>
+                        <h4>sep 2016 - jun 2018</h4>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- work project section starts -->
+    <section class="work" id="work">
+
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+        <div class="box-container"></div>
+
+        <a href="/projects" class="btn dark-blue">View All<i class="fas fa-arrow-right"></i></a>
+
+    </section>
+
+    <!-- experience section starts -->
+    <section class="experience" id="experience">
+
+        <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+
+        <div class="timeline" id="experienceContainer">
+        </div>
+
+        <a href="/experience" class="btn dark-blue">View All
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+
+        <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+        <div class="container">
+            <img draggable="false" src="/assets/images/contact/contact.jpg" alt="">
+            <form action="https://formspree.io/f/moqzenlb" method="POST">
+                <div class="form-group">
+                    <div class="field">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <i class='fas fa-user'></i>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="email" placeholder="Email" required>
+                        <i class='fas fa-envelope'></i>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="phone" placeholder="Phone">
+                        <i class='fas fa-phone-alt'></i>
+                    </div>
+                    <div class="message">
+                        <textarea placeholder="Message" name="message" required></textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                </div>
+                <button class="btn dark-blue" type="submit">Submit<i class="fa fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Eduardo's Portfolio</h3>
+                <hr>
+                <p>Thank you for visiting my personal portfolio website.</p>
+            </div>
+
+            <div class="box">
+                <h3>Companies</h3>
+                <hr>
+                <a href="https://www.ghostcoretech.com/"><i class="fa-solid fa-city"></i>GhostCore</a>
+                <a href="https://www.instagram.com/hart_edits/"><i class="fa-solid fa-city"></i>Hart</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact</h3>
+                <hr>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/velmaredu/" class="fab fa-linkedin" aria-label="LinkedIn"
+                        target="_blank"></a>
+                    <a href="https://github.com/velmaredu" class="fab fa-github" aria-label="GitHub"
+                        target="_blank"></a>
+                    <a href="mailto:velmaredu@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+
+        <h1>Copyright &copy; 2023 <span>Eduardo Velasco</span></h1>
+    </footer>
+
+    <a href="#" class="fas fa-angle-up" id="scroll-top"></a>
 </body>
 
 </html>

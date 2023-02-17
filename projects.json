@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Portfolio",
+    "desc": "My personal portfolio developed with HTML, CSS, and JS.",
+    "image": "assets/images/work/portfolio.png",
+    "category": "full-stack",
+    "links": {
+      "view": "https://velmaredu.github.io/",
+      "code": "https://github.com/velmaredu/velmaredu.github.io"
+    }
+  }
+]

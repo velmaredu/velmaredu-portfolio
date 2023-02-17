@@ -1,0 +1,34 @@
+[
+    {
+        "name": "GMV",
+        "role": "Full-Stack Intern",
+        "time": "feb. 2023 - present",
+        "icon": "assets/images/experience/gmv/gmv_redblack.jpg",
+        "link": "https://www.gmv.com"
+    },
+    {
+        "name": "Self Employed",
+        "role": "Private tutor",
+        "time": "sep. 2022 - present",
+        "icon": "assets/images/experience/self-employed-logo.png"
+    },
+    {
+        "name": "Hart",
+        "role": "Graphic Designer",
+        "time": "nov. 2019 - present",
+        "icon": "assets/images/experience/hart/hart-white-logo.png"
+    },
+    {
+        "name": "GUI",
+        "role": "Board member",
+        "time": "sep. 2018 - present",
+        "icon": "assets/images/experience/gui/GUI-logo.png"
+    },
+    {
+        "name": "GhostCore",
+        "role": "Co-founder",
+        "time": "sep. 2017 - present",
+        "icon": "assets/images/experience/ghostcore/ghostcore-logo.jpg",
+        "link": "https://www.ghostcoretech.com"
+    }
+]
