@@ -78,8 +78,7 @@ $(document).ready(function () {
     });
 
     $("[id^='scroll-to-']").click(function () {
-        var id = $(this).attr("id").replace("scroll-to-", "");
-        console.log(id);
+        let id = $(this).attr("id").replace("scroll-to-", "");
         $('html, body').animate({
             scrollTop: $("#" + id).offset().top - $("header").outerHeight()
         }, 1000);
@@ -141,7 +140,7 @@ function showSkills(skills) {
 }
 
 function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
+    let projectsContainer = document.getElementById("projectsContainer");
     let projectHTML = "";
     projects.slice(0, 6).forEach(project => {
         projectHTML += `
@@ -170,7 +169,7 @@ function showProjects(projects) {
     });
 
     /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
+    srtop.reveal('.projects .box', { interval: 200 });
 
 }
 
@@ -185,8 +184,8 @@ function showExperience(experience) {
           <i class="fa-2x fa-solid fa-briefcase"></i> 
           ${link} 
           <div class="content"> 
-            <img draggable="false" src=${experience.icon} alt="" style="order:${className === 'right' ? 2 : 1};"> 
-            <div class="text" style="order:${className === 'right' ? 1 : 2};"> 
+            <img draggable="false" src=${experience.icon} alt=""> 
+            <div class="text"> 
               <h2>${experience.name}</h2> 
               <div class="desc"> 
                 <h3>${experience.role}</h3> 
@@ -232,18 +231,6 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// // Start of Tawk.to Live Chat
-// var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-// (function () {
-//     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-//     s1.async = true;
-//     s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-//     s1.charset = 'UTF-8';
-//     s1.setAttribute('crossorigin', '*');
-//     s0.parentNode.insertBefore(s1, s0);
-// })();
-
-
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
@@ -281,7 +268,7 @@ srtop.reveal('.skills .container .bar', { delay: 400 });
 srtop.reveal('.education .box', { interval: 200 });
 
 /* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
+srtop.reveal('.projects .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
