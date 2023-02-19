@@ -132,12 +132,10 @@ function showSkills(skills) {
     let skillHTML = "";
     skills.forEach(skill => {
         skillHTML += `
-            <div class="bar">
-                  <div class="info">
-                    <img src=${skill.icon} alt="skill" />
-                    <span>${skill.name}</span>
-                  </div>
-                </div>`
+            <div class="box">
+                <img src=${skill.icon} alt="skill" />
+                <span>${skill.name}</span>
+            </div>`
     });
     skillsContainer.innerHTML = skillHTML;
 }

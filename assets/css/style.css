@@ -138,8 +138,6 @@ hr {
   top: -120%;
 }
 
-/* pre loader end */
-
 /* navbar */
 header {
   position: fixed;
@@ -571,20 +569,23 @@ header .navbar ul li a.active {
 }
 
 .skills .container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  /* background: #2e2e2e96; */
+  margin: 0 auto;
+  max-width: 1200px;
   gap: 1.8rem;
   border-radius: 1rem;
   padding: 2rem;
   width: 90%;
 }
 
-.skills .container .bar {
+.skills .container .box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   height: 13rem;
   width: 15rem;
   cursor: pointer;
@@ -594,53 +595,25 @@ header .navbar ul li a.active {
   transition: 0.2s;
 }
 
-.skills .container .bar:hover {
+.skills .container .box:hover {
   box-shadow: 0 0 20px white;
   background: white;
 }
 
-.skills .container .bar:hover .info span {
+.skills .container .box:hover span {
   color: black;
 }
 
-.skills .container .bar .info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.skills .container .bar .info img {
+.skills .container .box img {
   height: 5rem;
   width: 5rem;
 }
 
-.skills .container .bar .info span {
+.skills .container .box span {
   color: white;
   font-size: 2rem;
   font-weight: 500;
 }
-
-/* skills media queries starts*/
-@media screen and (max-width: 600px) {
-  .skills {
-    gap: 3rem;
-  }
-
-  .skills .container {
-    padding: 0;
-    width: 100%;
-  }
-
-  .skills .container .row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
-/* skills media queries ends*/
-/* skills section ends */
 
 /* education section starts */
 .education {
@@ -876,14 +849,10 @@ header .navbar ul li a.active {
 
 .work .desc .btns .btn {
   line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
-}
-
-.work .desc .btns .btn {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  padding: 1.5rem 2.5rem;
 }
 
 .work .desc .btns .button1:hover i {
