@@ -1004,6 +1004,7 @@ header .navbar ul li a.active {
   width: auto;
   height: 100%;
   max-height: 75vh;
+  max-width: 100%;
   padding: 5%;
   box-sizing: border-box;
 }
