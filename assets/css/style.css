@@ -292,6 +292,7 @@ header .navbar ul li a.active {
 .home {
   margin-top: 6.5rem;
   flex-direction: row !important;
+  border: solid 5px greenyellow;
 }
 
 /* .home #particles-js {
