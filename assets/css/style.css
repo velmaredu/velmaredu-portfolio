@@ -286,7 +286,6 @@ header .navbar ul li a.active {
     right: 0;
   }
 }
-
 /* hamburger icon ends */
 
 /* hero section starts*/
@@ -295,13 +294,13 @@ header .navbar ul li a.active {
   flex-direction: row !important;
 }
 
-.home #particles-js {
+/* .home #particles-js {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-}
+} */
 
 .home .content {
   flex: 1 1 40rem;
@@ -314,6 +313,7 @@ header .navbar ul li a.active {
   border-radius: 50%;
   padding: 0 5%;
   cursor: pointer;
+  border: solid 5px greenyellow;
 }
 
 .home .content h2 {
