@@ -239,6 +239,7 @@ header .navbar ul li a.active {
     top: 6.5rem;
     right: -120%;
     width: 50%;
+    height: 100%;
     height: fit-content;
     text-align: left;
     align-items: flex-start;
@@ -308,11 +309,10 @@ header .navbar ul li a.active {
 }
 
 .home img {
-  flex: 1 1 40rem;
-  z-index: 1;
   height: auto;
+  max-width: 90vw;
   border-radius: 50%;
-  padding: 0 10%;
+  padding: 0 5%;
   cursor: pointer;
 }
 
