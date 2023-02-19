@@ -185,8 +185,8 @@ function showExperience(experience) {
           <i class="fa-2x fa-solid fa-briefcase"></i> 
           ${link} 
           <div class="content"> 
-            <img draggable="false" src=${experience.icon} alt="" style="order:${className === 'right' ? 2 : 1};"> 
-            <div class="text" style="order:${className === 'right' ? 1 : 2};"> 
+            <img draggable="false" src=${experience.icon} alt=""> 
+            <div class="text"> 
               <h2>${experience.name}</h2> 
               <div class="desc"> 
                 <h3>${experience.role}</h3> 

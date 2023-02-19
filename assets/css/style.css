@@ -885,15 +885,8 @@ header .navbar ul li a.active {
   z-index: -2;
 }
 
-.experience .container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: center;
-}
-
 /*circles on timeline*/
-.experience .container i {
+.experience .timeline .container i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -923,15 +916,22 @@ header .navbar ul li a.active {
 .experience .timeline .left i {
   right: -1.5vw;
 }
-
 /*end circles on timeline*/
+
+.experience .timeline .container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+}
 
 .experience .container .content {
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: white;
   background-color: #294F85;
-  height: 10vw;
+  height: 20vh;
   width: 30vw;
   position: relative;
   border-radius: 4%/10%;
@@ -960,7 +960,7 @@ header .navbar ul li a.active {
 }
 
 .experience .container.right .content {
-  justify-content: flex-end;
+  flex-direction: row-reverse;
 }
 
 .experience .container.right .content .text {
@@ -1001,41 +1001,29 @@ header .navbar ul li a.active {
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 700px) {
-  .experience .timeline .container {
-    display: flex;
-  }
-
+@media screen and (max-width: 1200px) {
   .experience .timeline {
     width: 100%;
-    border: solid 5px greenyellow;
+  }
+  
+  .experience .timeline .container {
+    display: flex;
+    width: fit-content;
+    right: auto;
+    left: auto;
   }
 
   .experience .timeline .container .content{
+    width: 100%;
     left: auto;
     right: auto;
+    flex-direction: row;
   }
-
-  /* .experience .timeline .container.right{
-    justify-content: flex-start;
-  } */
-
-  /* .experience .container::after {
-    font-size: 2.2rem;
-  } */
 
   .experience .timeline .container i {
     display: none;
   }
-
-  .experience .container.left,
-  .experience .container.right {
-    right: auto;
-    left: auto;
-  }
 }
-
-/* experience section ends */
 
 /* contact section starts */
 .contact {
