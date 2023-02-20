@@ -149,18 +149,6 @@ function showProjects(projects) {
     </div>`
     });
     projectsContainer.innerHTML = projectHTML;
-
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
-    });
-
-    /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
-
 }
 
 function showExperience(experience) {
