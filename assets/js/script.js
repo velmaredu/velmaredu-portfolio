@@ -61,12 +61,12 @@ $(document).ready(function () {
     });
 
     // smooth scrolling
-    // $('a[href*="#"]').on('click', function (e) {
-    //     e.preventDefault();
-    //     $('html, body').animate({
-    //         scrollTop: $($(this).attr('href')).offset().top,
-    //     }, 500, 'linear')
-    // });
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top,
+        }, 500, 'linear')
+    });
 
     //Type effect
     var typed = new Typed(".typing-text", {
@@ -164,12 +164,12 @@ function showProjects(projects) {
     const srtop = ScrollReveal({
         origin: 'top',
         distance: '80px',
-        duration: 100,
+        duration: 1000,
         reset: true
     });
 
     /* SCROLL PROJECTS */
-    srtop.reveal('.projects .box', { interval: 200 });
+    srtop.reveal('.work .box', { interval: 200 });
 
 }
 
@@ -235,7 +235,7 @@ document.addEventListener('keydown', function (e) {
 const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
-    duration: 1000,
+    duration: 100,
     reset: true
 });
 
