@@ -226,10 +226,6 @@ header .navbar ul li a.active {
   display: none;
 }
 
-#menu:hover {
-  color: #E0967D;
-}
-
 @media (max-width: 768px) {
   #menu {
     display: block;
@@ -239,12 +235,13 @@ header .navbar ul li a.active {
     position: fixed;
     top: 6.5rem;
     right: -120%;
-    width: 50%;
-    height: 100%;
+    padding-inline: 2vw;
+    align-items: center;
+    width: fit-content;
     height: fit-content;
     text-align: left;
     align-items: flex-start;
-    background-color: #0e0f31;
+    background-color: black;
   }
 
   header .navbar ul {
