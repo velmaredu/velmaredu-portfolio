@@ -236,11 +236,9 @@ header .navbar ul li a.active {
     top: 6.5rem;
     right: -120%;
     padding-inline: 2vw;
-    align-items: center;
     width: fit-content;
     height: fit-content;
     text-align: left;
-    align-items: flex-start;
     background-color: black;
   }
 
@@ -250,7 +248,6 @@ header .navbar ul li a.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     list-style: none;
   }
 
@@ -261,18 +258,10 @@ header .navbar ul li a.active {
   }
 
   header .navbar ul li a {
-    display: block;
     padding: 1rem;
     text-align: left;
     color: #fff;
     font-size: 2rem;
-  }
-
-  header .navbar ul li a.active,
-  header .navbar ul li a:hover {
-    padding: 1rem;
-    color: #fff;
-    border-radius: 0.5rem;
   }
 
   .fa-times {
