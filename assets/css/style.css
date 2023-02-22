@@ -528,11 +528,13 @@ header .navbar ul li a.active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 3vw;
 }
 
 .projects .container .box {
   position: relative;
-  height: 30rem;
+  height: 40vh;
+  max-width: 90vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;

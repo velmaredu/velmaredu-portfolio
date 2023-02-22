@@ -8,5 +8,14 @@
       "view": "https://velmaredu.github.io/",
       "code": "https://github.com/velmaredu/velmaredu.github.io"
     }
+  },
+  {
+    "name": "GhostCore Maps",
+    "desc": "Website to search for electric chargers",
+    "image": "assets/images/work/gc-maps.png",
+    "category": "full-stack",
+    "links": {
+      "view": "https://maps.ghostcoretech.com/"
+    }
   }
 ]
