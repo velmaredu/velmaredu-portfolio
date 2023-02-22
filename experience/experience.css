@@ -84,6 +84,7 @@
 .experience .container .content img {
     height: 100%;
     width: auto;
+    max-width: 40vw;
     border-radius: 4%/10%;
     box-sizing: border-box;
 }

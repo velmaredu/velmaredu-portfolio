@@ -375,7 +375,7 @@ header .navbar ul li a.active {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1200px;
-  gap: 1.8rem;
+  gap: 3vw;
   border-radius: 1rem;
 }
 
@@ -492,7 +492,8 @@ header .navbar ul li a.active {
   }
 
   .education .container .box img{
-    max-width: 100%;
+    height: auto;
+    max-width: 90vw;
   }
 }
 
