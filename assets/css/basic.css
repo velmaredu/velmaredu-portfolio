@@ -1,3 +1,11 @@
+:root{
+  --dark-blue: #294F85;
+  --grey-blue: #536175;
+  --white-blue: #44D3DB;
+  --white-red: #E0967D;
+  --dark-red: #A83223;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,13 +50,13 @@ a {
 }
 
 span {
-  color: #294F85;
+  color: var(--dark-blue);
 }
 
 hr {
   border: 0;
   height: 2px;
-  background-color: #44D3DB;
+  background-color: var(--white-blue);
   width: 100%;
   margin-bottom: 0.5rem;
 }
@@ -69,44 +77,44 @@ hr {
 
 .dark-blue {
   color: white;
-  background: #294F85;
-  box-shadow: 0px 0px 15px #294F85;
+  background: var(--dark-blue);
+  box-shadow: 0px 0px 15px var(--dark-blue);
 }
 
 .dark-blue:hover {
   color: black;
-  background: #44D3DB;
-  box-shadow: 0px 0px 15px #44D3DB;
+  background: var(--white-blue);
+  box-shadow: 0px 0px 15px var(--white-blue);
 }
 
 .white-blue {
-  color: #294F85;
+  color: var(--dark-blue);
   background: white;
   box-shadow: 0px 0px 15px white;
 }
 
 .white-blue:hover {
-  color: #44D3DB;
+  color: var(--white-blue);
   background: black;
   box-shadow: 0px 0px 15px black;
 }
 
 .dark-red {
   color: white;
-  background: #A83223;
+  background: var(--dark-red);
 }
 
 .dark-red:hover {
   color: black;
-  background: #E0967D;
-  box-shadow: 0px 0px 15px #E0967D;
+  background: var(--white-red);
+  box-shadow: 0px 0px 15px var(--white-red);
 
 }
 
 /* footer section starts */
 footer {
     min-height: fit-content;
-    background: #294F85;
+    background: var(--dark-blue);
   }
   
   footer .container {
@@ -137,7 +145,7 @@ footer {
   }
   
   footer .container .box a:hover {
-    color: #E0967D;
+    color: var(--white-red);
   }
   
   footer .container .box a i {
@@ -165,8 +173,8 @@ footer {
   
   footer .container .box .socials a:hover {
     background: black;
-    color: #E0967D;
-    border: solid 2px #E0967D;
+    color: var(--white-red);
+    border: solid 2px var(--white-red);
   }
   
   footer h1 {
@@ -183,7 +191,7 @@ footer {
   }
   
   footer h1 span {
-    color: #E0967D;
+    color: var(--white-red);
   }
   
   @-webkit-keyframes pound {
@@ -240,7 +248,7 @@ footer {
     width: 4rem;
     font-size: 2rem;
     font-weight: bold;
-    background: #E0967D;
+    background: var(--white-red);
     color: black;
     border-radius: 50%;
     transition: 0.5s linear;

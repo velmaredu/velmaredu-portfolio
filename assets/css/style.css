@@ -1,8 +1,3 @@
-/* #294F85 Azul oscuro
-#536175 Azul grisáceo
-#44D3DB Azul claro
-#E0967D Rojo claro
-#A83223 Rojo oscuro */
 .heading {
   font-size: 3.5rem;
   color: rgb(32, 32, 32);
@@ -41,7 +36,7 @@ header .logo i {
 }
 
 header .logo:hover {
-  color: #E0967D;
+  color: var(--white-red);
 }
 
 header .navbar {
@@ -85,7 +80,7 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a.active {
-  color: #44D3DB;
+  color: var(--white-blue);
 }
 
 /* hamburger icon starts*/
@@ -187,7 +182,7 @@ header .navbar ul li a.active {
 
 .home .content p span {
   font-size: 2.5rem;
-  color: #A83223;
+  color: var(--dark-red);
   font-weight: 600;
 }
 
@@ -265,7 +260,7 @@ header .navbar ul li a.active {
 }
 
 .about .resume-btn:hover {
-  background: #44D3DB;
+  background: var(--white-blue);
   color: black;
 }
 
@@ -299,7 +294,7 @@ header .navbar ul li a.active {
 
 .about .row .content .tag {
   font-size: 1.4rem;
-  color: #A83223;
+  color: var(--dark-red);
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -367,7 +362,7 @@ header .navbar ul li a.active {
 }
 
 .skills .heading span {
-  color: #44D3DB;
+  color: var(--white-blue);
 }
 
 .skills .container {
@@ -466,7 +461,7 @@ header .navbar ul li a.active {
 
 .education .container .box .content h3 {
   font-size: 2.5rem;
-  color: #294F85;
+  color: var(--dark-blue);
   padding: 0.5rem 0;
   font-weight: 600;
   text-align: left;
@@ -479,7 +474,7 @@ header .navbar ul li a.active {
 
 .education h4 {
   font-size: 2rem;
-  color: #A83223;
+  color: var(--dark-red);
   text-align: left;
   margin: 1rem 0;
   font-weight: 700;
@@ -521,7 +516,7 @@ header .navbar ul li a.active {
 }
 
 .projects .heading span {
-  color: #E0967D;
+  color: var(--white-red);
 }
 
 .projects .container {
@@ -557,7 +552,7 @@ header .navbar ul li a.active {
   width: 100%;
   height: 4.5rem;
   font-size: 2rem;
-  background: #E0967D;
+  background: var(--white-red);
 }
 
 .projects .container .box .content {
@@ -646,7 +641,7 @@ header .navbar ul li a.active {
   flex-wrap: wrap;
   background: #fff;
   border-radius: 1.5rem;
-  box-shadow: 0 0px 20px #536175;
+  box-shadow: 0 0px 20px var(--grey-blue);
   height: fit-content;
   margin-inline: 2vw;
   padding: 2vh 1vw;
@@ -715,12 +710,12 @@ header .navbar ul li a.active {
 .contact .container form .field input:focus,
 .contact .container form .message textarea:focus {
   padding-left: 47px;
-  border: 2px solid #A83223;
+  border: 2px solid var(--dark-red);
 }
 
 .field input:focus~i,
 .message textarea:focus~i {
-  color: #A83223;
+  color: var(--dark-red);
 }
 
 .contact .container form .message {
