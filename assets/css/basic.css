@@ -194,18 +194,6 @@ footer {
     color: var(--white-red);
   }
   
-  @-webkit-keyframes pound {
-    to {
-      transform: scale(1.1);
-    }
-  }
-  
-  @keyframes pound {
-    to {
-      transform: scale(1.1);
-    }
-  }
-  
   @media (max-width: 450px) {
     footer .container .box {
       margin: 1.5rem;
