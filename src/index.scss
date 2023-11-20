@@ -1,0 +1,90 @@
+@import "App.scss";
+@import "./assets/styles/variables";
+
+:root {
+  font-family: "Roboto", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  color-scheme: light dark;
+  color: $default-light-text-color;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+//   a:hover {
+//     color: #747bff;
+//   }
+//   button {
+//     background-color: #f7f7f7;
+//   }
+// }
+
+.white-blue {
+  color: $dark-blue;
+  background: white;
+  box-shadow: 0px 0px 15px white;
+
+  &:hover {
+    color: $white-blue;
+    background: black;
+    box-shadow: 0px 0px 15px black;
+  }
+}
+
+.dark-blue {
+  color: white;
+  background: $dark-blue;
+  box-shadow: 0px 0px 15px $dark-blue;
+
+  &:hover {
+    color: black;
+    background: $white-blue;
+    box-shadow: 0px 0px 15px $white-blue;
+  }
+}
+
+.dark-red {
+  color: white;
+  background: $dark-red;
+
+  &:hover {
+    color: black;
+    background: $white-red;
+    box-shadow: 0px 0px 15px $white-red;
+  }
+}
