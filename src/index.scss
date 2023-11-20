@@ -3,7 +3,6 @@
 
 :root {
   font-family: "Roboto", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   overflow-x: hidden;
   scroll-behavior: smooth;
 
@@ -29,16 +28,62 @@ a {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 100vw;
   min-height: 100vh;
   background: #f7f7f7;
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dark-blue {
+    color: white;
+    background: $dark-blue;
+    box-shadow: 0px 0px 15px $dark-blue;
+
+    &:hover {
+      color: black;
+      background: $white-blue;
+      box-shadow: 0px 0px 15px $white-blue;
+    }
+  }
+
+  .white-blue {
+    color: $dark-blue;
+    background: white;
+    box-shadow: 0px 0px 15px white;
+
+    &:hover {
+      color: $white-blue;
+      background: black;
+      box-shadow: 0px 0px 15px black;
+    }
+  }
+
+  .dark-red {
+    color: white;
+    background: $dark-red;
+
+    &:hover {
+      color: black;
+      background: $white-red;
+      box-shadow: 0px 0px 15px $white-red;
+    }
+  }
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+span {
+  color: $dark-blue;
 }
 
 // @media (prefers-color-scheme: light) {
@@ -53,38 +98,3 @@ h1 {
 //     background-color: #f7f7f7;
 //   }
 // }
-
-.white-blue {
-  color: $dark-blue;
-  background: white;
-  box-shadow: 0px 0px 15px white;
-
-  &:hover {
-    color: $white-blue;
-    background: black;
-    box-shadow: 0px 0px 15px black;
-  }
-}
-
-.dark-blue {
-  color: white;
-  background: $dark-blue;
-  box-shadow: 0px 0px 15px $dark-blue;
-
-  &:hover {
-    color: black;
-    background: $white-blue;
-    box-shadow: 0px 0px 15px $white-blue;
-  }
-}
-
-.dark-red {
-  color: white;
-  background: $dark-red;
-
-  &:hover {
-    color: black;
-    background: $white-red;
-    box-shadow: 0px 0px 15px $white-red;
-  }
-}

@@ -16,7 +16,7 @@ function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Header />
-      <Container style={{ marginTop: "4.5rem" }}>
+      <Container maxWidth={false} style={{ margin: "4rem 0 0 0", padding: "0" }}>
         <Home />
         <About />
         <Skills />
