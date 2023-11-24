@@ -17,8 +17,9 @@ function Home() {
                 <Button
                     className="dark-blue"
                     id="scroll-to-about"
-                    sx={{ textTransform: "none" }}
-                >About Me<ExpandCircleDown /></Button>
+                    sx={{ textTransform: "none" }}>
+                    About Me<ExpandCircleDown />
+                </Button>
                 <Stack direction="row" className="socials" spacing={1}>
                     <Button className="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/velmaredu" target="_blank">
                         <LinkedIn />
