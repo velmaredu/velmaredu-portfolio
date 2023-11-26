@@ -1,13 +1,32 @@
+import { Code } from "@mui/icons-material"
+import { Card, CardContent, CardMedia, Grid, Stack, Typography } from "@mui/material"
+import "../assets/styles/skills.scss"
+import skillsData from "../data/skills.json"
+
 function Skills() {
+    const renderSkills = () => {
+        return skillsData.map((skill, index) => (
+            <Grid key={index} item padding={2} xs={6} sm={4} md={3} lg={2}>
+                <Card className="box">
+                    <CardMedia component="img" image={skill.icon} alt="skill" />
+                    <CardContent className="content">
+                        <Typography variant="h6">{skill.name}</Typography>
+                    </CardContent>
+                </Card>
+            </Grid>
+        ))
+    }
+
     return (
-        <section className="skills" id="skills">
-            <h2 className="heading">
-                <i className="fas fa-laptop-code"></i> <span>Skills</span> &
-                <span>Abilities</span>
-            </h2>
-            <div className="container" id="skillsContainer"></div>
-        </section>
-    );
+        <Stack className="section" id="skills" alignItems={"center"}>
+            <Typography variant="h3" className="heading">
+                <Code fontSize="inherit" /><span>Skills <span>&</span> Abilities</span>
+            </Typography>
+            <Grid container id="skillsContainer">
+                {renderSkills()}
+            </Grid>
+        </Stack>
+    )
 }
 
-export default Skills;
+export default Skills

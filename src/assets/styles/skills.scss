@@ -1,0 +1,64 @@
+@import "variables";
+
+#skills {
+  background-image: url(../images/mp_warm.avif);
+  background-size: cover;
+  background-position: center;
+
+  .heading {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20%/80%;
+    color: white;
+    background: #000000d5;
+    box-shadow: 0px 1px 20px black;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    span {
+      color: $white-blue;
+
+      span {
+        color: white;
+      }
+    }
+  }
+
+  #skillsContainer .box {
+    padding: 15% 5%;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px black;
+    background: black;
+    transition: 0.2s;
+
+    > *:not(:first-child) {
+      margin-top: 5%;
+    }
+
+    img {
+      padding-inline: 30%;
+    }
+
+    .content {
+      text-align: center;
+      padding: 0;
+
+      & > *:not(img) {
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px white;
+      background: white;
+
+      .content h6 {
+        color: black;
+      }
+    }
+  }
+}
