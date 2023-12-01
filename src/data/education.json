@@ -1,0 +1,16 @@
+[
+    {
+        "link": "https://www.uva.es/",
+        "logo": "./images/education/logo-uva.svg",
+        "title": "Bachelor of Computer Engineering",
+        "place": "University of Valladolid | UVa",
+        "period": "sep 2018 - jan 2023"
+    },
+    {
+        "link": "https://www.lasalle.es/",
+        "logo": "./images/education/la-salle-logo.jpg",
+        "title": "Science High School Degree",
+        "place": "La Salle",
+        "period": "sep 2016 - jun 2018"
+    }
+]
