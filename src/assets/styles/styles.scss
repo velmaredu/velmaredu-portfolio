@@ -1,0 +1,331 @@
+@import "variables";
+
+.heading {
+  font-size: 3.5rem;
+  color: rgb(32, 32, 32);
+  font-weight: 800;
+  text-align: center;
+}
+
+/* hamburger icon starts*/
+#menu {
+  font-size: 3rem;
+  cursor: pointer;
+  color: black;
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  #menu {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    display: flex;
+    top: 6.5rem;
+    right: -100%;
+    padding: 2vw;
+    height: fit-content;
+    align-items: center;
+    background-color: black;
+
+    &.nav-toggle {
+      right: 0;
+    }
+
+    ul {
+      flex-flow: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      gap: 2vh;
+      list-style: none;
+
+      li {
+        text-align: center;
+        border-radius: 0.5rem;
+        height: 5vh;
+
+        a {
+          padding: 1vw;
+          color: white;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .fa-times {
+    transform: rotate(180deg);
+  }
+}
+
+/* projects section starts */
+.projects {
+  background-image: url(/assets/images/mp_cold.png);
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    color: black;
+    padding: 1rem;
+  }
+
+  .heading {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    padding: 1.7rem;
+    color: white;
+    background: #000000d5;
+    box-shadow: 0px 1px 20px black;
+    border-radius: 20%/80%;
+
+    span {
+      color: $white-red;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vw;
+
+    .box {
+      position: relative;
+      height: 40rem;
+      max-width: 90vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: 0.2s;
+
+      &:hover .content {
+        top: auto;
+        animation-name: slide-up;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 35.5rem;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+
+        h3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 4.5rem;
+          font-size: 2rem;
+          background: $white-red;
+        }
+
+        .desc {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: fit-content;
+          padding: 1rem;
+          gap: 2rem;
+          bottom: -100%;
+          left: 0;
+          width: 100%;
+
+          p {
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+          }
+
+          .btns {
+            display: flex;
+            justify-content: center;
+            gap: 8rem;
+            align-items: center;
+            width: 100%;
+
+            .btn {
+              line-height: 0;
+              display: flex;
+              align-items: center;
+              gap: 0.3rem;
+              padding: 1.5rem 2.5rem;
+            }
+
+            .button1:hover i {
+              transform: translateX(-5px);
+            }
+
+            .button2:hover i {
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* contact section starts */
+.contact {
+  background: #e5ecfb;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0px 20px $grey-blue;
+    height: fit-content;
+    margin-inline: 2vw;
+    padding: 2vh 1vw;
+    gap: 2vw;
+
+    img {
+      width: auto;
+      height: 100%;
+      max-height: 75vh;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 0.7;
+      height: 100%;
+      gap: 1vw;
+      min-width: 30vw;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1vh;
+
+        .field {
+          height: 50px;
+          display: flex;
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 1.25rem;
+        color: rgb(51, 51, 51);
+        font-size: 1.5rem;
+        pointer-events: none;
+        transform: translateY(-50%);
+      }
+
+      .field input,
+      .message textarea {
+        width: 100%;
+        height: 100%;
+        resize: vertical;
+        overflow: auto;
+        outline: none;
+        padding: 0 16px 0 48px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        border: 1px solid rgb(51, 51, 51);
+        background: #e5ecfb;
+
+        &:focus {
+          padding-left: 47px;
+          border: 2px solid $dark-red;
+
+          ~ i {
+            color: $dark-red;
+          }
+        }
+      }
+
+      .message {
+        position: relative;
+        width: 100%;
+
+        i {
+          top: 2.25rem;
+          font-size: 2rem;
+          left: 1rem;
+        }
+
+        textarea {
+          min-height: 130px;
+          max-height: 230px;
+          max-width: 100%;
+          min-width: 100%;
+          padding: 12px 20px 0 48px;
+
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+
+        &:hover > * {
+          color: black;
+        }
+
+        i {
+          position: relative;
+          right: 2rem;
+          color: white;
+          transform: translateY(5%);
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}

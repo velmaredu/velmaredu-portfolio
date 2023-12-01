@@ -6,7 +6,7 @@ import "../assets/styles/about.scss"
 function About() {
     return (
         <Stack direction="column" className="section" id="about" >
-            <Typography variant="h2" className="heading" align="center" fontWeight={"bold"}><i className="fas fa-user-alt"></i> About <span>Me</span></Typography>
+            <Typography variant="h2" className="section-title"><i className="fas fa-user-alt"></i> About <span>Me</span></Typography>
 
             <Stack direction={"row"} alignItems={"center"} spacing={6}>
                 <Card sx={{ boxShadow: "0 5px 10px rgba(0, 0, 0, 0.6)", borderRadius: "5%" }}>
