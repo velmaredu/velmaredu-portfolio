@@ -19,7 +19,7 @@ function Skills() {
 
     return (
         <Stack className="section" id="skills" alignItems={"center"}>
-            <Typography variant="h3" className="heading">
+            <Typography variant="h2" className="section-title">
                 <Code fontSize="inherit" /><span>Skills <span>&</span> Abilities</span>
             </Typography>
             <Grid container id="skillsContainer">
