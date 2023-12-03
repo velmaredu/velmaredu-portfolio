@@ -1,4 +1,5 @@
 .section {
+  align-items: center;
   flex-wrap: wrap;
   gap: 3vh;
   padding: 2vh 5vw;
@@ -7,4 +8,10 @@
 .section-title {
   text-align: center;
   font-weight: bold !important;
+  align-items: center;
+
+  > * {
+    vertical-align: middle;
+    font-weight: bold !important;
+  }
 }
