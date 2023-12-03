@@ -6,7 +6,7 @@ import skillsData from "../data/skills.json"
 function Skills() {
     const renderSkills = () => {
         return skillsData.map((skill, index) => (
-            <Grid key={index} item padding={2} xs={6} sm={4} md={3} lg={2}>
+            <Grid item key={index} padding={2} xs={6} sm={4} md={3} lg={2}>
                 <Card className="box">
                     <CardMedia component="img" image={skill.icon} alt="skill" />
                     <CardContent className="content">
