@@ -1,4 +1,4 @@
-import { FileDownload } from "@mui/icons-material"
+import { FileDownload, Person } from "@mui/icons-material"
 import { Button, Card, CardMedia, Link, Stack, Typography } from "@mui/material"
 import profile from "../assets/images/profile.png"
 import "../assets/styles/about.scss"
@@ -6,7 +6,9 @@ import "../assets/styles/about.scss"
 function About() {
     return (
         <Stack direction="column" className="section" id="about" >
-            <Typography variant="h2" className="section-title"><i className="fas fa-user-alt"></i> About <span>Me</span></Typography>
+            <Typography variant="h2" className="section-title" gap={2}>
+                <Person fontSize="inherit" /><>About <span>Me</span></>
+            </Typography>
 
             <Stack direction={"row"} alignItems={"center"} spacing={6}>
                 <Card sx={{ boxShadow: "0 5px 10px rgba(0, 0, 0, 0.6)", borderRadius: "5%" }}>

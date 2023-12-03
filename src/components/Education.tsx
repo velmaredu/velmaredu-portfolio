@@ -21,11 +21,9 @@ function Education() {
 
     return (
         <Stack className="section" id="education">
-            <Stack direction={"row"} className="section-title">
-                <Typography variant="h2" gap={2}>
-                    <School fontSize="inherit" /><>My <span>Education</span></>
-                </Typography>
-            </Stack>
+            <Typography variant="h2" className="section-title" gap={2}>
+                <School fontSize="inherit" /><>My <span>Education</span></>
+            </Typography>
 
             <Stack spacing={2} alignItems={"center"}>
                 {renderEducations()}
