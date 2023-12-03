@@ -1,38 +1,33 @@
-import { Card, CardActionArea, Stack, Typography } from "@mui/material"
+import { School } from "@mui/icons-material"
+import { Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material"
 import "../assets/styles/education.scss"
 import educationData from "../data/education.json"
-import { School } from "@mui/icons-material"
 
 function Education() {
-
     const renderEducations = () => {
         return educationData.map((education, index) => (
-            <Card key={index} className="box">
+            <Card key={index} className="box" sx={{ justifyContent: "start", flexWrap: "wrap" }}>
                 <CardActionArea href={education.link}>
-                    <Stack direction={"row"} className="box">
-                        <img
-                            draggable="false"
-                            src={education.logo}
-                            alt=""
-                        />
-                        <Stack className="content">
-                            <Typography variant="h5">{education.title}</Typography>
-                            <p>{education.place}</p>
-                            <Typography variant="h6">{education.period}</Typography>
-                        </Stack>
-                    </Stack>
+                    <CardMedia component="img" image={education.logo} alt="education" />
+                    <CardContent className="content" sx={{ width: "fit-content" }}>
+                        <Typography variant="h5">{education.title}</Typography>
+                        <Typography variant="body1">{education.place}</Typography>
+                        <Typography variant="h6">{education.period}</Typography>
+                    </CardContent>
                 </CardActionArea>
-            </Card>
+            </Card >
         ))
     }
 
     return (
         <Stack className="section" id="education">
-            <Typography variant="h2" className="section-title">
-                <School fontSize="large" /> My <span>Education</span>
-            </Typography>
+            <Stack direction={"row"} className="section-title">
+                <Typography variant="h2" gap={2}>
+                    <School fontSize="inherit" /><>My <span>Education</span></>
+                </Typography>
+            </Stack>
 
-            <Stack className="container">
+            <Stack spacing={2} alignItems={"center"}>
                 {renderEducations()}
             </Stack>
         </Stack>
