@@ -1,15 +1,15 @@
 import { Container, ThemeProvider } from '@mui/material'
 import './App.scss'
+import defaultTheme from './assets/themes/DefaultTheme'
 import About from './components/About'
 import Contact from './components/Contact'
 import Education from './components/Education'
-import Experience from './components/Experience'
+import Experiences from './components/Experiences'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './components/Home'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
-import defaultTheme from './assets/themes/DefaultTheme'
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
         <Skills />
         <Education />
         <Projects />
-        <Experience />
+        <Experiences />
         <Contact />
         <Footer />
       </Container>

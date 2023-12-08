@@ -1,0 +1,132 @@
+@import "variables";
+
+$card-height: 20vh;
+$circle-diameter: calc($card-height/3);
+
+#experience {
+  .timeline {
+    position: relative;
+    width: 100%;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.5vw;
+      background: #020133;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-0.25vw);
+    }
+
+    .container {
+      position: relative;
+      width: 50%;
+
+      &.left {
+        transform: translateX(-50%);
+
+        svg {
+          right: calc(0vh - ($circle-diameter/2));
+        }
+
+        .box,
+        a {
+          flex-direction: row-reverse;
+        }
+
+        .box {
+          margin-right: 7%;
+        }
+      }
+
+      &.right {
+        transform: translateX(50%);
+
+        svg {
+          left: calc(0vh - ($circle-diameter/2));
+        }
+
+        .box {
+          margin-left: 7%;
+        }
+      }
+
+      svg {
+        position: absolute;
+        height: $circle-diameter;
+        width: auto;
+        top: 50%;
+        transform: translateY(calc(-1 * $circle-diameter/ 2));
+        padding: calc($circle-diameter/ 10);
+        border: calc($circle-diameter/ 10) solid $dark-blue;
+        border-radius: 50%;
+        background-color: white;
+      }
+
+      .box {
+        display: flex;
+        color: white;
+        background-color: $dark-blue;
+        height: $card-height;
+        border-radius: 4%/10%;
+        border: solid 1px black;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        img {
+          height: 100%;
+          width: auto;
+          border-radius: 4%/10%;
+          box-sizing: border-box;
+          object-fit: cover;
+        }
+
+        &.linked:hover {
+          transform: scale(1.03);
+          box-shadow: -1px 5px 10px $dark-blue;
+        }
+
+        .card-content {
+          h6 {
+            color: #e0967d;
+          }
+
+          #time-block {
+            color: white;
+
+            * {
+              white-space: nowrap;
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // @media screen and (max-width: 1200px) {
+  //   .timeline {
+  //     width: 100%;
+  //   }
+
+  //   .timeline .container {
+  //     max-width: none;
+  //   }
+
+  //   .timeline .container .content {
+  //     left: auto;
+  //     right: auto;
+  //     flex-direction: row;
+  //   }
+
+  //   .timeline .container i {
+  //     display: none;
+  //   }
+
+  //   .container.left,
+  //   .container.right {
+  //     transform: none;
+  //   }
+  // }
+}

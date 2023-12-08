@@ -24,7 +24,30 @@ const defaultTheme = createTheme({
                     cursor: "pointer"
                 },
             }
+        },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    width: "fit-content"
+                },
+            }
+        },
+        MuiSvgIcon: {
+            styleOverrides: {
+                root: {
+                    fontSize: "inherit"
+                },
+            }
         }
+        // MuiButton: {
+        //     styleOverrides: {
+        //         root: {
+        //             justifyContent: "center",
+        //             alignItems: "center",
+        //             verticalAlign: "middle"
+        //         },
+        //     }
+        // },
     }
 })
 
