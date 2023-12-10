@@ -1,51 +1,57 @@
+import { Button, Divider, Link, Stack, Typography } from "@mui/material"
+import "../assets/styles/footer.scss"
+import { Apartment, GitHub, LinkedIn, Mail } from "@mui/icons-material"
+
 function Footer() {
     return (
         <footer>
-            <div className="container">
-                <div className="box">
-                    <h3>Eduardo's Portfolio</h3>
-                    <hr />
-                    <p>Thank you for visiting my personal portfolio website.</p>
-                </div>
-
-                <div className="box">
-                    <h3>Companies</h3>
-                    <hr />
-                    <a href="https://www.ghostcoretech.com/"
-                    ><i className="fa-solid fa-city"></i>GhostCore</a
-                    >
-                    <a href="https://www.instagram.com/hart_edits/"
-                    ><i className="fa-solid fa-city"></i>Hart</a
-                    >
-                </div>
-
-                <div className="box">
-                    <h3>Contact</h3>
-                    <hr />
-                    <div className="socials">
-                        <a
+            <Stack width={"100%"} direction={"row"} className="container">
+                <Stack spacing={1}>
+                    <Typography variant="h4">Eduardo's Portfolio</Typography>
+                    <Divider variant="fullWidth" />
+                    <Typography variant="body1">Thank you for visiting my personal portfolio website.</Typography>
+                </Stack>
+                <Stack spacing={1} className="companies-box">
+                    <Typography variant="h4">Companies</Typography>
+                    <Divider variant="fullWidth" />
+                    <Link href="https://www.ghostcoretech.com/"
+                    ><Apartment />GhostCore</Link>
+                    <Link href="https://www.instagram.com/hart_edits/"
+                    ><Apartment />Hart</Link>
+                </Stack>
+                <Stack spacing={1}>
+                    <Typography variant="h4">Contact</Typography>
+                    <Divider variant="fullWidth" />
+                    <Stack direction={"row"} spacing={2} className="socials">
+                        <Button
                             href="https://www.linkedin.com/in/velmaredu/"
                             className="fab fa-linkedin"
                             aria-label="LinkedIn"
                             target="_blank"
-                        ></a>
-                        <a
+                        >
+                            <LinkedIn />
+                        </Button>
+                        <Button
                             href="https://github.com/velmaredu"
                             className="fab fa-github"
                             aria-label="GitHub"
                             target="_blank"
-                        ></a>
-                        <a
+                        >
+                            <GitHub />
+                        </Button>
+                        <Button
                             href="mailto:velmaredu@gmail.com"
                             className="fas fa-envelope"
                             aria-label="Mail"
                             target="_blank"
-                        ></a>
-                    </div>
-                </div>
-            </div>
-
-            <h1>Copyright &copy; 2023 <span>Eduardo Velasco</span></h1>
+                        >
+                            <Mail />
+                        </Button>
+                    </Stack>
+                </Stack>
+            </Stack>
+            <Divider variant="fullWidth" />
+            <Typography variant="h6" fontWeight={"bold"}>Copyright &copy; 2023 <span>Eduardo Velasco</span></Typography>
         </footer>
     )
 }

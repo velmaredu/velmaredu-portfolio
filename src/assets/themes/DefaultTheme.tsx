@@ -38,16 +38,14 @@ const defaultTheme = createTheme({
                     fontSize: "inherit"
                 },
             }
-        }
-        // MuiButton: {
-        //     styleOverrides: {
-        //         root: {
-        //             justifyContent: "center",
-        //             alignItems: "center",
-        //             verticalAlign: "middle"
-        //         },
-        //     }
-        // },
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    minWidth: "0",
+                },
+            }
+        },
     }
 })
 
