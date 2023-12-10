@@ -1,45 +1,100 @@
+import { Box, Button, Card, CardContent, CardMedia, FormControl, InputAdornment, Stack, TextField, TextareaAutosize, Typography } from "@mui/material"
+import "../assets/styles/contact.scss"
+import { Chat, Mail, Person, Phone, Send, SupportAgent } from "@mui/icons-material"
+
 function Contact() {
     return (
-        <section className="contact" id="contact">
-            <h2 className="heading">
-                <i className="fas fa-headset"></i> Get in <span>Touch</span>
-            </h2>
+        <Stack className="section" id="contact">
+            <Typography variant="h2" className="section-title">
+                <SupportAgent />Get in <span>Touch</span>
+            </Typography>
 
-            <div className="container">
-                <img
-                    draggable="false"
-                    src="/assets/images/contact/contact.jpg"
-                    alt=""
-                />
-                <form action="https://formspree.io/f/moqzenlb" method="POST">
-                    <div className="form-group">
-                        <div className="field">
-                            <input type="text" name="name" placeholder="Name" required />
-                            <i className="fas fa-user"></i>
-                        </div>
-                        <div className="field">
-                            <input type="text" name="email" placeholder="Email" required />
-                            <i className="fas fa-envelope"></i>
-                        </div>
-                        <div className="field">
-                            <input type="text" name="phone" placeholder="Phone" />
-                            <i className="fas fa-phone-alt"></i>
-                        </div>
-                        <div className="message">
-                            <textarea
-                                placeholder="Message"
-                                name="message"
+            <Card className="card">
+                <Box style={{ flex: "1", minWidth: "50vh" }}>
+                    <CardMedia
+                        component="img"
+                        draggable="false"
+                        src="./images/contact/contact.jpg"
+                    />
+                </Box>
+                <CardContent sx={{ minWidth: "50%", flex: '1' }}>
+                    <form action="https://formspree.io/f/moqzenlb" method="POST">
+                        <FormControl className="form-control">
+                            <TextField
+                                className="form-field"
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                variant="outlined"
+                                color="secondary"
+                                fullWidth
                                 required
-                            ></textarea>
-                            <i className="fas fa-comment-dots"></i>
-                        </div>
-                    </div>
-                    <button className="btn dark-blue" type="submit">
-                        Submit<i className="fa fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-        </section>
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Person />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                            <TextField
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                variant="outlined"
+                                color="secondary"
+                                fullWidth
+                                required
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Mail />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                            <TextField
+                                type="text"
+                                name="phone"
+                                placeholder="Phone"
+                                variant="outlined"
+                                color="secondary"
+                                fullWidth
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Phone />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                            <TextField
+                                type="text"
+                                name="message"
+                                placeholder="Message"
+                                variant="outlined"
+                                color="secondary"
+                                fullWidth
+                                required
+                                multiline
+                                rows={6}
+                                style={{ overflow: 'auto' }}
+                                InputProps={{
+                                    startAdornment: (
+                                        <InputAdornment position="start">
+                                            <Chat />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                            />
+                        </FormControl>
+                        <Button className="dark-blue" type="submit" >
+                            <>Submit</><Send />
+                        </Button>
+                    </form>
+                </CardContent>
+            </Card>
+        </Stack >
     )
 }
 
