@@ -1,6 +1,6 @@
-import { Box, Button, Card, CardContent, CardMedia, FormControl, InputAdornment, Stack, TextField, TextareaAutosize, Typography } from "@mui/material"
-import "../assets/styles/contact.scss"
 import { Chat, Mail, Person, Phone, Send, SupportAgent } from "@mui/icons-material"
+import { Box, Button, Card, CardContent, CardMedia, FormControl, InputAdornment, Stack, TextField, Typography } from "@mui/material"
+import "../assets/styles/contact.scss"
 
 function Contact() {
     return (
