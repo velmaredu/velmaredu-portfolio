@@ -1,12 +1,11 @@
-@import "variables";
+@import 'variables';
 
 $ligh-link-color: #0e2431;
 
 header {
   align-items: center;
   justify-content: space-between;
-  padding-inline: 5vw;
-  height: 4rem;
+  height: $top-navbar-height;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 
   .logo {
@@ -31,20 +30,20 @@ header {
   }
 
   .navbar {
+    flex-grow: 1;
+    justify-content: flex-end;
     height: 100%;
 
-    & > * {
+    a {
       display: flex;
       height: 100%;
       align-items: center;
       justify-content: center;
       padding-inline: 1vw;
-    }
-
-    a {
       font-size: 1.1rem;
       font-weight: 650;
       letter-spacing: 0.04rem;
+      cursor: pointer;
       transition: 0.2s;
 
       &:hover:not(.active) {
@@ -56,5 +55,11 @@ header {
         color: $white-blue;
       }
     }
+  }
+
+  #menu {
+    font-size: 3rem;
+    cursor: pointer;
+    height: fit-content;
   }
 }
