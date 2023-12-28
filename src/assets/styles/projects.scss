@@ -19,21 +19,11 @@
   }
 
   .box {
-    // height: 50vh;
-    //     cursor: pointer;
     border-radius: 0.5rem;
     transition: 0.2s;
     height: 50vh;
     display: flex;
     flex-direction: column-reverse;
-
-    // &:hover .content {
-    //   top: auto;
-    //   animation-name: slide-up;
-    //   animation-duration: 0.3s;
-    //   animation-timing-function: ease-out;
-    //   animation-fill-mode: forwards;
-    // }
 
     img {
       flex: 1;
@@ -41,13 +31,8 @@
 
     .content {
       padding: 0;
-      //       display: flex;
-      //       flex-direction: column;
-      //       align-items: center;
       position: relative;
       width: 100%;
-      //       background: rgba(255, 255, 255, 0.9);
-      //       transition: all 0.3s ease;
       p {
         padding: 1% 2%;
       }
@@ -59,28 +44,6 @@
         width: 100%;
         background: $white-red;
       }
-
-      //       .desc {
-      //         display: flex;
-      //         flex-direction: column;
-      //         justify-content: center;
-      //         align-items: center;
-      //         height: fit-content;
-      //         padding: 1rem;
-      //         gap: 2rem;
-      //         bottom: -100%;
-      //         left: 0;
-      //         width: 100%;
-
-      //         p {
-      //           font-size: 1.5rem;
-      //           display: flex;
-      //           flex-direction: column;
-      //           justify-content: center;
-      //           width: 100%;
-      //         }
-
-      //   }
     }
 
     .buttons {
@@ -114,13 +77,3 @@
     padding: 1rem 2rem;
   }
 }
-
-// @keyframes slide-up {
-//   from {
-//     transform: translateY(100%);
-//   }
-
-//   to {
-//     transform: translateY(0);
-//   }
-// }

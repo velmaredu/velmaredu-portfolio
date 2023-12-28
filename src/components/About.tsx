@@ -5,7 +5,7 @@ import "../assets/styles/about.scss"
 
 function About() {
     return (
-        <Stack direction="column" className="section" id="about" >
+        <Stack direction="column" className="section" id="about">
             <Typography variant="h2" className="section-title" gap={2}>
                 <Person fontSize="inherit" /><>About <span>Me</span></>
             </Typography>

@@ -6,6 +6,7 @@ $social-button-size: 4.5em;
 #home {
   font-weight: 600;
   justify-content: space-evenly;
+  min-height: calc(100vh - $top-navbar-height);
 
   .content {
     gap: 1vw;
