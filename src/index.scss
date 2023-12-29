@@ -1,8 +1,8 @@
-@import 'App.scss';
-@import './assets/styles/variables';
+@import "App.scss";
+@import "./assets/styles/variables";
 
 :root {
-  font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
 
@@ -15,11 +15,6 @@
   &::-webkit-scrollbar {
     width: 0;
   }
-}
-
-* {
-  background-color: light-dark($light-bg, $dark-bg);
-  color: light-dark($light-color, $dark-color);
 }
 
 a {
@@ -79,10 +74,6 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-span {
-  color: $dark-blue;
 }
 
 // @media (prefers-color-scheme: light) {

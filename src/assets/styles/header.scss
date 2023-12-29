@@ -1,31 +1,25 @@
-@import 'variables';
+@import "variables";
 
 $ligh-link-color: #0e2431;
+$light-header-bg: #92a1b0;
+$dark-header-bg: #40464d;
 
 header {
+  // background-color: $dark-header-bg !important;
   align-items: center;
   justify-content: space-between;
   height: $top-navbar-height;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 
   .logo {
     display: flex;
-    height: 100%;
     align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 750;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out,
-      transform 0.3s ease-in-out;
+    gap: 1vw;
+    font-weight: bold;
+    // color: white;
 
-    &:hover {
+    &:hover * {
+      transition: 0.3s ease-in-out;
       color: $white-red;
-    }
-
-    svg {
-      font-size: 1.6rem;
-      margin-right: 1vw;
-      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -38,17 +32,14 @@ header {
       display: flex;
       height: 100%;
       align-items: center;
-      justify-content: center;
       padding-inline: 1vw;
-      font-size: 1.1rem;
-      font-weight: 650;
-      letter-spacing: 0.04rem;
+      font-weight: bold;
       cursor: pointer;
-      transition: 0.2s;
+      transition: 0.2s ease-in-out;
 
-      &:hover:not(.active) {
-        color: white;
-        background-color: #000;
+      &:hover {
+        background-color: $light-bg;
+        color: $light-color;
       }
 
       &.active {
@@ -58,8 +49,7 @@ header {
   }
 
   #menu {
-    font-size: 3rem;
+    color: $dark-color;
     cursor: pointer;
-    height: fit-content;
   }
 }

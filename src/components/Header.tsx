@@ -18,22 +18,23 @@ function Header() {
     }
 
     return (
-        <AppBar position="fixed">
-            <Toolbar sx={{ justifyContent: 'space-between', width: "100%" }}>
+        <AppBar
+            position="fixed"
+        >
+            <Toolbar sx={{ width: "100%" }}>
                 <Typography
-                    variant='h2'
+                    variant='h4'
                     component='a'
                     href="/"
                     className="logo"
                 >
-                    <AccountCircle />Eduardo Velasco
+                    <AccountCircle /><span>Eduardo Velasco</span>
                 </Typography>
-
                 <IconButton
                     id="menu"
                     onClick={handleOpenNavMenu}
                     color="secondary"
-                    sx={{ display: { xs: 'flex', md: 'none' }, height: "fit-content" }}
+                    sx={{ display: { xs: 'flex', md: 'none' } }}
                 >
                     <MenuIcon />
                 </IconButton>
@@ -45,9 +46,9 @@ function Header() {
                     {pages.map((page, key) => (
                         <Typography
                             key={key}
-                            variant='h3'
-                            textAlign='center'
+                            variant='h6'
                             component='a'
+                            href={`/${page}`}
                         >
                             {page}
                         </Typography>
