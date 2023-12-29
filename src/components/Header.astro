@@ -1,0 +1,30 @@
+---
+import "../styles/header.css";
+const pages = [
+  "Home",
+  "About",
+  "Skills",
+  "Education",
+  "Projects",
+  "Experience",
+  "Contact",
+];
+---
+
+<header>
+  <!-- <AccountCircle /> -->
+  <a href='/'>
+    <span>Eduardo Velasco</span>
+  </a>
+
+  <nav>
+    {pages.map((page) => <a href={`/${page}`}>{page}</a>)}
+  </nav>
+
+  <button id='menu' style='display: none;'>
+    <!-- <MenuIcon /> -->
+  </button>
+  <nav style='display: none;'>
+    {pages.map((page) => <a href={`/${page}`}>{page}</a>)}
+  </nav>
+</header>
