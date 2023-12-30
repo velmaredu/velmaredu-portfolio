@@ -1,10 +1,14 @@
+@import "_variables.css";
+
 header {
-  position: fixed;
   display: flex;
+  position: fixed;
+  top: 0;
+  height: var(--header-height);
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5vw 2vw;
+  padding-inline: 2vw;
   box-sizing: border-box;
 
   nav {
@@ -14,6 +18,12 @@ header {
 
     a {
       opacity: 0.8;
+
+      &:hover {
+        filter: brightness(1.5);
+        opacity: 1;
+        text-shadow: 0 0 2rem #fff;
+      }
     }
   }
 }
