@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/overpass";
+import "../styles/_variables.css";
 import Header from "../components/Header.astro";
 
 interface Props {
@@ -35,6 +36,30 @@ const { title } = Astro.props;
 
   body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--header-height);
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  section {
+    width: 100%;
+    min-height: calc(100vh - var(--header-height));
+    gap: 3vh;
+    padding: 2vw 5vw;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: fit-content;
   }
 </style>
