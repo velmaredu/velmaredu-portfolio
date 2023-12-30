@@ -1,0 +1,11 @@
+:root {
+  /* COLORS */
+  --prussian-blue: #012840;
+  --airforce-blue: #6593a6;
+  --fluorescent-cyan: #05f2f2;
+  --safety-orange: #f27405;
+  --licorice: #260d0b;
+
+  /* DIMENSIONS */
+  --header-height: 10vh;
+}
