@@ -11,15 +11,18 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.0.8)(tailwindcss@3.4.0)
-  '@fontsource-variable/overpass':
-    specifier: ^5.0.17
-    version: 5.0.17
+  '@fontsource-variable/quicksand':
+    specifier: ^5.0.16
+    version: 5.0.16
   astro:
     specifier: ^4.0.8
     version: 4.0.8(typescript@5.3.3)
   tailwindcss:
     specifier: ^3.4.0
     version: 3.4.0
+  typed.js:
+    specifier: ^2.1.0
+    version: 2.1.0
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -614,8 +617,8 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource-variable/overpass@5.0.17:
-    resolution: {integrity: sha512-NzrUBQPBlVpfTpMqBIYsrxIKer+ADtC07e9NyxnSgBsgV1eZwaih9cRGnuOa4H/B00kM0bBj1kN1M6XEiVeFuA==}
+  /@fontsource-variable/quicksand@5.0.16:
+    resolution: {integrity: sha512-I8QmSpiukev1QRNE9eimA+r7SLbYlNGi1iOZrLKdm6bXN1nSHFU98PlWIK1K/VRjR2MqNeStaVaIzwi4pnuDOA==}
     dev: false
 
   /@img/sharp-darwin-arm64@0.33.1:
@@ -3599,6 +3602,10 @@ packages:
   /type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
+    dev: false
+
+  /typed.js@2.1.0:
+    resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==}
     dev: false
 
   /typesafe-path@0.2.2:

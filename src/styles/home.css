@@ -1,0 +1,56 @@
+@import "./_variables.css";
+
+#home {
+  --social-media-icon-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  place-items: center;
+  box-sizing: border-box;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+
+    h1 span {
+      color: var(--fluorescent-cyan);
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 2vw;
+
+      a {
+        transition: transform 0.4s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        .social-media-icon {
+          height: var(--social-media-icon-size);
+          width: auto;
+        }
+      }
+    }
+
+    button {
+      background-color: var(--airforce-blue);
+      font-size: 1.5rem;
+
+      &:hover {
+        filter: brightness(1.5);
+        color: black;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  img {
+    height: auto;
+    width: 25%;
+    border-radius: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+---
+import "../styles/home.css";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import GmailIcon from "../icons/Gmail.astro";
+import TypingText from "./TypingText.astro";
+
+const phrases = [
+  "full-stack development",
+  "photo editing",
+  "branding",
+  "logo creation",
+];
+---
+
+<section id='home'>
+  <div class='content'>
+    <h1>
+      Hi There,<br />
+       I am <span>Eduardo Velasco</span>
+    </h1>
+    <h2>
+      I am into <TypingText phrases={phrases} />
+    </h2>
+    <button type='button'>
+      About Me
+      <ion-icon name='arrow-down-circle'></ion-icon>
+    </button>
+    <nav class='socials'>
+      <a
+        class='bg-transparent'
+        aria-label='LinkedIn'
+        href='https://www.linkedin.com/in/velmaredu'
+        target='_blank'
+      >
+        <LinkedInIcon class='social-media-icon' />
+      </a>
+      <a aria-label='Gmail' href='mailto:velmaredu@gmail.com' target='_blank'>
+        <GmailIcon class='social-media-icon' />
+      </a>
+      <a
+        aria-label='GitHub'
+        href='https://github.com/velmaredu'
+        target='_blank'
+      >
+        <GitHubIcon class='social-media-icon' />
+      </a>
+    </nav>
+  </div>
+  <img draggable='false' src='/profile.png' alt='Profile' />
+</section>
