@@ -1,0 +1,48 @@
+---
+import "../styles/about.css";
+
+const downLoadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/cv.pdf";
+  link.download = "VelascoMartinezEduardo.pdf";
+  link.click();
+};
+---
+
+<section id='about'>
+  <h2 class='section-title'>
+    <!-- <Person fontSize='inherit' /> -->
+    <>About <span>Me</span></>
+  </h2>
+
+  <div class='core'>
+    <img draggable='false' src='/profile.png' alt='Profile' />
+    <div class='content'>
+      <h3>I am Eduardo</h3>
+      <h4 class='tag'>Computer Engineering</h4>
+      <p>
+        I am passionate about the world of technology, specifically computer
+        science. Not only programming but also the design of projects for their
+        subsequent implementation. I am also passionate about image editing.
+      </p>
+
+      <ul>
+        <li>
+          <span>Email:</span><a href='mailto:velmaredu@gmail.com'>
+            velmaredu@gmail.com
+          </a>
+        </li>
+        <li><span>Place:</span> Valladolid, Spain</li>
+      </ul>
+    </div>
+  </div>
+
+  <a
+    class='btn'
+    href='/data/VelascoMartínezEduardo_EN.pdf'
+    download='VelascoMartínezEduardo.pdf'
+  >
+    Resume
+    <ion-icon name='document'></ion-icon>
+  </a>
+</section>
