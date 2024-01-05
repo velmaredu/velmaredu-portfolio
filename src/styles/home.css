@@ -2,10 +2,6 @@
 
 #home {
   --social-media-icon-size: 2.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 10vw;
-  place-items: center;
   box-sizing: border-box;
 
   .content {
@@ -38,7 +34,7 @@
 
     button {
       background-color: var(--airforce-blue);
-      font-size: 1.5rem;
+      font-size: 1.25rem;
 
       &:hover {
         filter: brightness(1.5);

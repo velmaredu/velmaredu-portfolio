@@ -8,8 +8,10 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--prussian-blue);
   padding-inline: 2vw;
   box-sizing: border-box;
+  z-index: 2;
 
   nav {
     display: flex;
