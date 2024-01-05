@@ -1,0 +1,55 @@
+@import "_variables.css";
+
+#about {
+  flex-direction: column;
+
+  h2 {
+    font-weight: bold;
+
+    span {
+      color: var(--fluorescent-cyan);
+    }
+  }
+
+  .core {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+
+    img {
+      width: 20%;
+      border-radius: 2.5rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 70ch;
+      gap: 1vw;
+
+      h4 {
+        color: var(--safety-orange);
+      }
+
+      li {
+        gap: 1rem;
+        span {
+          font-weight: bold;
+          color: var(--safety-orange);
+        }
+      }
+    }
+  }
+
+  & > a {
+    background-color: var(--airforce-blue);
+    font-size: 1.25rem;
+
+    &:hover {
+      filter: brightness(1.5);
+      color: black;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
