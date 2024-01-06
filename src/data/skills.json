@@ -1,0 +1,86 @@
+[
+    {
+        "name": "ReactJS",
+        "icon": "React"
+    },
+    {
+        "name": "NodeJS",
+        "icon": "NodeJS"
+    },
+    {
+        "name": "Sass",
+        "icon": "Sass"
+    },
+    {
+        "name": "Firebase",
+        "icon": "Firebase"
+    },
+    {
+        "name": "Bootstrap",
+        "icon": "Bootstrap"
+    },
+    {
+        "name": "HTML5",
+        "icon": "HTML5"
+    },
+    {
+        "name": "CSS3",
+        "icon": "CSS"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "JavaScript"
+    },
+    {
+        "name": "Java",
+        "icon": "Java"
+    },
+    {
+        "name": "Kotlin",
+        "icon": "Kotlin"
+    },
+    {
+        "name": "PHP",
+        "icon": "PhpDark"
+    },
+    {
+        "name": "Python",
+        "icon": "Python"
+    },
+    {
+        "name": "C++",
+        "icon": "C++"
+    },
+    {
+        "name": "MySQL",
+        "icon": "MySQL"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "PostgreSQL"
+    },
+    {
+        "name": "jQuery",
+        "icon": "JQueryDark"
+    },
+    {
+        "name": "Git VCS",
+        "icon": "Git"
+    },
+    {
+        "name": "Photoshop",
+        "icon": "Photoshop"
+    },
+    {
+        "name": "Illustrator",
+        "icon": "Illustrator"
+    },
+    {
+        "name": "Tailwind CSS",
+        "icon": "Tailwind"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "TypeScript"
+    }
+]

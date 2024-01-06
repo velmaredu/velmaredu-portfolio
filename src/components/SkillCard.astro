@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  name: string;
+  imagePath: string;
+  altText: string;
+}
+
+const { name, imagePath, altText } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/icons/*.{svg, astro}"
+);
+---
+
+<div class='card'>
+  <Image src={images[imagePath]()} alt={altText} {...Astro.props} />
+  <h6>{name}</h6>
+</div>
+<style>
+  .card {
+    --cardSize: 10rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: var(--cardSize);
+    width: var(--cardSize);
+    padding: 10% 5%;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px black;
+    background: black;
+    transition: 0.2s;
+    gap: 3%;
+
+    img {
+      padding-inline: 30%;
+      height: 75%;
+      width: auto;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px white;
+      background: white;
+
+      h6 {
+        color: black;
+      }
+    }
+  }
+</style>

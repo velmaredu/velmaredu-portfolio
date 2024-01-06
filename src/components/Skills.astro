@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import skillsData from "../data/skills.json";
+import background from "../images/mp_warm.avif";
+import "../styles/skills.css";
+import SkillCard from "./SkillCard.astro";
+
+const images = import.meta.glob("/src/icons/*");
+console.log(images);
+
+// let DynamicIcon: AstroComponentFactory;
+
+// async function getIcon(name: string) {
+//   if (name) {
+//     try {
+//       const module = await import(`../icons/${name}.astro`);
+//       DynamicIcon = module.default;
+//       console.log(DynamicIcon);
+//     } catch (error) {
+//       console.error(`Failed to load icon: ${name}`);
+//     }
+//   }
+// }
+
+// getIcon("React");
+---
+
+<section id='skills'>
+  <h2 class='section-title'>
+    <span>Skills</span> & <span>Abilities</span>
+    <!-- <Code fontSize="inherit" /> -->
+  </h2>
+  <div id='skillsContainer'>
+    {
+      skillsData.map((skill) => (
+        <SkillCard
+          name={skill.name}
+          imagePath={`/src/icons/${skill.icon}.svg`}
+          altText='Un retrato de Priya sobre un fondo de ladrillo.'
+        />
+      ))
+    }
+    <!-- {
+      skillsData.map((skill) => (
+        <div class='box'>
+          <Image
+            src={images[skill.icon]()}
+            alt={skill.name}
+            width={50}
+            height={50}
+          />
+          <h6>{skill.name}</h6>
+        </div>
+      ))
+    } -->
+  </div>
+  <Image src={background} alt='A bird sitting on a nest of eggs.' />
+</section>
