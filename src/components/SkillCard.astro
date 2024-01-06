@@ -23,7 +23,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     --cardSize: 10rem;
     display: flex;
     flex-direction: column;
-    place-items: center;
+    justify-content: flex-end;
+    align-items: center;
     height: var(--cardSize);
     width: var(--cardSize);
     padding: 10% 5%;
@@ -32,12 +33,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     box-shadow: 0 0 20px black;
     background: black;
     transition: 0.2s;
-    gap: 3%;
+    gap: 15%;
 
     img {
-      padding-inline: 30%;
-      height: 75%;
-      width: auto;
+      height: 65%;
     }
 
     &:hover {
