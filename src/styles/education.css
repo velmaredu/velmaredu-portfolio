@@ -1,0 +1,59 @@
+@import "_variables.css";
+
+#education {
+  flex-direction: column;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    gap: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      display: flex;
+      height: 30vh;
+      overflow: hidden;
+      border-radius: 1rem;
+      color: black;
+      background-color: whitesmoke;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 1.2rem rgba(255, 255, 255, 0.5);
+      }
+
+      img {
+        max-height: min(45vh, 100%);
+        width: 40%;
+        object-fit: cover;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        padding: 2vw;
+
+        h3 {
+          color: var(--licorice);
+          font-weight: bold;
+        }
+
+        h4 {
+          color: var(--safety-orange);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
