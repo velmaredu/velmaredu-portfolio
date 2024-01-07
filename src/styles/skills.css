@@ -13,15 +13,10 @@
   }
 
   h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 3rem;
     background: black;
     box-shadow: 0px 1px 20px black;
-    gap: 1rem;
 
     span {
       color: var(--fluorescent-cyan);

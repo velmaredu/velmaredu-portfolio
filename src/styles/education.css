@@ -3,16 +3,8 @@
 #education {
   flex-direction: column;
 
-  h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    gap: 1rem;
-
-    span {
-      color: var(--safety-orange);
-    }
+  h2 span {
+    color: var(--safety-orange);
   }
 
   .container {
