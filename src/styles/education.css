@@ -9,6 +9,10 @@
     justify-content: center;
     font-weight: bold;
     gap: 1rem;
+
+    span {
+      color: var(--safety-orange);
+    }
   }
 
   .container {
