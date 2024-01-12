@@ -1,0 +1,37 @@
+@import "_variables.css";
+
+#projects {
+  --box-height: 50vh;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
+  }
+
+  h2 {
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    background: black;
+    box-shadow: 0px 1px 20px black;
+
+    span {
+      color: var(--fluorescent-cyan);
+    }
+  }
+
+  #projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    width: 100%;
+    gap: 3vh;
+  }
+
+  a {
+    background-color: var(--airforce-blue);
+  }
+}

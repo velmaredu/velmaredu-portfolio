@@ -1,0 +1,65 @@
+---
+interface Props {
+  height?: string;
+  width?: string;
+}
+
+const { height = "auto", width = "auto" } = Astro.props;
+---
+
+<div class='flip-card'>
+  <div class='front'>
+    <slot name='front' />
+  </div>
+  <div class='back'>
+    <slot name='back' />
+  </div>
+</div>
+
+<style define:vars={{ height, width }}>
+  .flip-card {
+    position: relative;
+    height: var(--height);
+    width: var(--width);
+
+    > .front,
+    > .back {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      border-radius: 2rem;
+      overflow: hidden;
+      backface-visibility: hidden;
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 1.5s;
+      transition-property: transform;
+    }
+
+    > .front {
+      transform: rotateX(0deg);
+    }
+
+    > .back {
+      position: absolute;
+      padding: 3%;
+      background-color: var(--prussian-blue);
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      transform: rotateX(-180deg);
+    }
+
+    &:hover {
+      > .front {
+        transform: rotateX(180deg);
+      }
+      > .back {
+        transform: rotateX(0deg);
+      }
+    }
+  }
+</style>

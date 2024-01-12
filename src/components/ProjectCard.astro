@@ -1,0 +1,98 @@
+---
+import type { Project } from "../types";
+import FlipCard from "./basic/FlipCard.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<FlipCard height='40vh'>
+  <slot name='image' slot='front' />
+  <div
+    slot='back'
+    class='content h-full w-full flex justify-center items-center flex-col'
+  >
+    <h5 class='title'>{project.name}</h5>
+    <p>{project.desc}</p>
+    <div class='buttons'>
+      <a
+        href={project.links.view}
+        class='btn btn-left'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <ion-icon name='eye-sharp' class='icon'></ion-icon>
+        View
+      </a>
+      {
+        project.links.code && (
+          <a
+            href={project.links.code}
+            class='btn btn-right'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Code
+            <ion-icon name='code-slash-sharp' class='icon' />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</FlipCard>
+
+<style>
+  .content {
+    position: relative;
+    background-color: var(--prussian-blue);
+    transition: top ease-in-out 1s;
+
+    &:hover {
+      top: auto;
+    }
+
+    p {
+      padding: 2% 3%;
+    }
+
+    h5 {
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem;
+
+    .icon {
+      transition: all ease-in-out 0.2s;
+    }
+
+    a {
+      gap: 0.5vw;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--airforce-blue);
+
+      svg {
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    .btn-left:hover .icon {
+      transform: translateX(-5px);
+    }
+
+    .btn-right:hover .icon {
+      transform: translateX(5px);
+    }
+  }
+</style>

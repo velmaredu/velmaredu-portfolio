@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Portfolio",
+        "desc": "My personal portfolio developed with HTML, CSS, and JS.",
+        "image": "portfolio.png",
+        "category": "full-stack",
+        "links": {
+            "view": "https://velmaredu.github.io/",
+            "code": "https://github.com/velmaredu/velmaredu.github.io"
+        }
+    },
+    {
+        "name": "GhostCore Maps",
+        "desc": "Website to search for electric chargers",
+        "image": "gc-maps.png",
+        "category": "full-stack",
+        "links": {
+            "view": "https://maps.ghostcoretech.com/"
+        }
+    },
+    {
+        "name": "Random Quote Machine",
+        "desc": "A random quote machine developed with React",
+        "image": "random-quote-machine.png",
+        "category": "full-stack",
+        "links": {
+            "view": "https://velmaredu.github.io/random-quote-machine/",
+            "code": "https://github.com/velmaredu/random-quote-machine"
+        }
+    },
+    {
+        "name": "Calculator",
+        "desc": "A calculator application developed with HTML, CSS, and JavaScript.",
+        "image": "calculator.png",
+        "category": "full-stack",
+        "links": {
+            "view": "https://velmaredu.github.io/calculator/",
+            "code": "https://github.com/velmaredu/calculator"
+        }
+    }
+]
