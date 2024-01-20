@@ -1,0 +1,76 @@
+#experience {
+  --card-height: 20vh;
+  --circle-diameter: calc(var(--card-height)/3);
+  --circle-border-size: calc(var(--circle-diameter)/ 10);
+  flex-direction: column;
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    gap: 2vh;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.5vw;
+      background: white;
+      top: 0;
+      bottom: 0;
+    }
+
+    .experience-row {
+      position: relative;
+      display: flex;
+      width: 50%;
+
+      .circle {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: var(--circle-diameter);
+        width: var(--circle-diameter);
+        color: black;
+        font-size: 1.5rem;
+        background-color: white;
+        top: calc(50% - var(--circle-diameter) / 2);
+        padding: calc(var(--circle-diameter)/ 10);
+        border: var(--circle-border-size) solid var(--safety-orange);
+        border-radius: 50%;
+      }
+
+      &.left {
+        margin-right: 50%;
+        justify-content: flex-end;
+
+        .circle {
+          left: calc(100% - var(--circle-diameter) / 2);
+        }
+
+        >:last-child {
+          margin-right: 10%;
+        }
+      }
+
+      &.right {
+        margin-left: 50%;
+        justify-content: flex-start;
+
+        .circle {
+          left: calc(0% - var(--circle-diameter) / 2);
+        }
+
+        >:last-child {
+          margin-left: 10%;
+        }
+      }
+    }
+  }
+
+  >a {
+    background-color: var(--airforce-blue);
+  }
+}

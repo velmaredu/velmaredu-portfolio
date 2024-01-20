@@ -8,3 +8,18 @@ export type Project = {
     code?: string;
   };
 }
+
+export type Experience = {
+  name: string;
+  role: string;
+  start: string;
+  end?: string;
+  icon: string;
+  link?: string;
+};
+
+export enum Side {
+  right = "right",
+  left = "left",
+}
+

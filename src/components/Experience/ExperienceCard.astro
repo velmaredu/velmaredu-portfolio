@@ -1,0 +1,103 @@
+---
+import type { Experience, Side } from "../../types";
+
+interface Props {
+  experience: Experience;
+  side: Side;
+}
+
+const { experience, side } = Astro.props;
+
+const getDurationInYearMonths = (start: string, end?: string) => {
+  const startDate = new Date(start);
+  const endDate = end ? new Date(end) : new Date();
+  let duration = "";
+  if (endDate.getFullYear() - startDate.getFullYear() > 0) {
+    duration += endDate.getFullYear() - startDate.getFullYear() + " years ";
+  }
+  if (endDate.getMonth() - startDate.getMonth() > 0) {
+    duration += endDate.getMonth() - startDate.getMonth() + " months";
+  }
+  return duration;
+};
+
+const formatDate = (date: string | undefined): string => {
+  if (!date) {
+    return "present";
+  }
+
+  const dateConverted = new Date(date);
+
+  const year = dateConverted.getFullYear();
+  const month = dateConverted.getMonth() + 1;
+
+  const monthName = new Intl.DateTimeFormat(undefined, {
+    month: "short",
+  }).format(new Date(`${year}-${month}-01`));
+  return `${monthName}. ${year}`;
+};
+---
+
+<a
+  class={`card ${experience.link ? "linked" : ""} ${side}`}
+  href={experience.link ? experience.link : null}
+  target='_blank'
+>
+  <slot />
+  <div class='card-content'>
+    <h4>{experience.name}</h4>
+    <h6>{experience.role}</h6>
+    <p id='time-block'>
+      {formatDate(experience.start)} - {formatDate(experience.end)}
+      ·
+      {getDurationInYearMonths(experience.start, experience.end)}
+    </p>
+  </div>
+</a>
+<style>
+  .card {
+    display: flex;
+    height: 20vh;
+    justify-content: flex-end;
+    max-width: 80%;
+    color: white;
+    background-color: var(--prussian-blue);
+    border-radius: 4%/10%;
+    border: solid 1px black;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+
+    &.linked:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      box-shadow: -1px 5px 10px var(--prussian-blue);
+    }
+
+    &.right {
+      flex-direction: row-reverse;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5%;
+      flex-grow: 1;
+
+      h4 {
+        text-wrap: nowrap;
+      }
+
+      h6 {
+        color: #e0967d;
+      }
+
+      #time-block {
+        color: white;
+        text-wrap: nowrap;
+        flex-grow: 1;
+      }
+    }
+  }
+</style>
