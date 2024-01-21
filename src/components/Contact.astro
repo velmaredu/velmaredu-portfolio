@@ -1,0 +1,46 @@
+---
+import Headset from "@/icons/Headset.astro";
+import "@/styles/contact.css";
+import { Image } from "astro:assets";
+import contactImg from "@/images/contact.jpg";
+---
+
+<section id='contact'>
+  <h2 class='section-title'>
+    <Headset class='size-10' />
+    Get in <span>Touch</span>
+  </h2>
+
+  <div class='card'>
+    <div class='image'>
+      <Image src={contactImg} draggable='false' alt='Contact' />
+    </div>
+    <form action='https://formspree.io/f/moqzenlb' method='POST'>
+      <div class='field'>
+        <ion-icon name='person' class='input-icon'></ion-icon>
+        <input type='text' name='name' placeholder='Name' required />
+      </div>
+      <div class='field'>
+        <ion-icon name='mail' class='input-icon'></ion-icon>
+        <input type='email' name='email' placeholder='Email' required />
+      </div>
+      <div class='field'>
+        <ion-icon name='call' class='input-icon'></ion-icon>
+        <input type='text' name='phone' placeholder='Phone' />
+      </div>
+      <div class='field'>
+        <ion-icon name='chatbox' class='textarea-icon'></ion-icon>
+        <textarea
+          name='message'
+          placeholder='Message'
+          rows='6'
+          value=''
+          required></textarea>
+      </div>
+      <button type='submit'>
+        Submit
+        <ion-icon name='send-outline'></ion-icon>
+      </button>
+    </form>
+  </div>
+</section>
