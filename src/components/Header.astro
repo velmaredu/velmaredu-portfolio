@@ -18,7 +18,7 @@ const pages = [
   </a>
 
   <nav>
-    {pages.map((page) => <a href={`/${page}`}>{page}</a>)}
+    {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
   </nav>
 
   <button id='menu' style='display: none;'>
