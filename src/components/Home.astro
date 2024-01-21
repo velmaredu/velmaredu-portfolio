@@ -1,8 +1,10 @@
 ---
-import "../styles/home.css";
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import GitHubIcon from "../icons/GitHub.astro";
-import GmailIcon from "../icons/Gmail.astro";
+import { Image } from "astro:assets";
+import GitHubIcon from "@/icons/GitHub.astro";
+import GmailIcon from "@/icons/Gmail.astro";
+import LinkedInIcon from "@/icons/LinkedIn.astro";
+import profileImage from "@/images/profile.png";
+import "@/styles/home.css";
 import TypingText from "./TypingText.astro";
 
 const phrases = [
@@ -17,7 +19,7 @@ const phrases = [
   <div class='content'>
     <h1>
       Hi There,<br />
-       I am <span>Eduardo Velasco</span>
+      I am <span>Eduardo Velasco</span>
     </h1>
     <h2>
       I am into <TypingText phrases={phrases} />
@@ -47,5 +49,5 @@ const phrases = [
       </a>
     </nav>
   </div>
-  <img draggable='false' src='/profile.png' alt='Profile' />
+  <Image src={profileImage} draggable='false' alt='Profile' />
 </section>

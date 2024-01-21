@@ -1,5 +1,7 @@
 ---
-import "../styles/about.css";
+import { Image } from "astro:assets";
+import "@/styles/about.css";
+import profileImage from "../images/profile.png";
 ---
 
 <section id='about'>
@@ -9,7 +11,7 @@ import "../styles/about.css";
   </h2>
 
   <div class='core'>
-    <img draggable='false' src='/profile.png' alt='Profile' />
+    <Image src={profileImage} draggable='false' alt='Profile' />
     <div class='content'>
       <h3>I am Eduardo</h3>
       <h4 class='tag'>Computer Engineering</h4>
