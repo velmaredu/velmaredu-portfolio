@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10vw;
 
     img {
@@ -28,12 +29,13 @@
       width: 70ch;
       gap: 1vw;
 
-      h4 {
+      p strong {
         color: var(--safety-orange);
       }
 
       li {
         gap: 1rem;
+
         span {
           font-weight: bold;
           color: var(--safety-orange);
@@ -42,7 +44,7 @@
     }
   }
 
-  & > a {
+  &>a {
     background-color: var(--airforce-blue);
     font-size: 1.25rem;
 
