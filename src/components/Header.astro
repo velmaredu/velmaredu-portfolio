@@ -25,6 +25,28 @@ const pages = [
     <!-- <MenuIcon /> -->
   </button>
   <nav style='display: none;'>
-    {pages.map((page) => <a href={`/${page}`}>{page}</a>)}
+    {pages.map((page) => <a href={`/#${page}`}>{page}</a>)}
   </nav>
 </header>
+<script>
+  const $navAElements: Element[] = [
+    ...document.querySelectorAll("header nav a"),
+  ];
+
+  window.addEventListener("scroll", () => {
+    $navAElements.forEach((a) => {
+      const selectionForSection = a.getAttribute("href")?.substring(1);
+      const sectionElement: HTMLDivElement | null = document.querySelector(
+        selectionForSection || "",
+      );
+
+      if (!sectionElement) return;
+      const selectionTop = sectionElement.offsetTop - 150;
+      if (window.scrollY <= selectionTop) return;
+      $navAElements.forEach((aToRemove) =>
+        aToRemove.classList.remove("active"),
+      );
+      a.classList.add("active");
+    });
+  });
+</script>
