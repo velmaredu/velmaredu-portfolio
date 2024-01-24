@@ -12,7 +12,7 @@
     {
         "name": "GhostCore Maps",
         "desc": "Website to search for electric chargers",
-        "image": "gc-maps.png",
+        "image": "gc-maps.webp",
         "category": "full-stack",
         "links": {
             "view": "https://maps.ghostcoretech.com/"
