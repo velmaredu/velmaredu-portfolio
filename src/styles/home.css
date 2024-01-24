@@ -3,15 +3,21 @@
 #home {
   --social-media-icon-size: 2.5rem;
   box-sizing: border-box;
+  gap: 3vw;
 
   .content {
     display: flex;
     flex-direction: column;
     gap: 4vh;
+    min-width: 60%;
 
     h1 span {
       color: var(--fluorescent-cyan);
       font-weight: bold;
+    }
+
+    h2 span {
+      color: var(--safety-orange);
     }
 
     nav {
