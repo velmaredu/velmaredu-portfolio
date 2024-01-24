@@ -47,11 +47,5 @@
   &>a {
     background-color: var(--airforce-blue);
     font-size: 1.25rem;
-
-    &:hover {
-      filter: brightness(1.5);
-      color: black;
-      transition: all 0.3s ease-in-out;
-    }
   }
 }
