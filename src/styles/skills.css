@@ -2,16 +2,7 @@
 
 #skills {
   flex-direction: column;
-  position: relative;
   overflow: hidden;
-
-  &>img {
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    object-position: center center;
-    z-index: -1;
-  }
 
   h2 {
     padding: 0.5rem 1rem;

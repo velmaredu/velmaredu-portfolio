@@ -2,9 +2,10 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import experiences from "../../data/experience.json";
-import "../../styles/experience.css";
-import { Side, type Experience } from "../../types.ts";
+import "@/styles/experience.css";
+import { Side, type Experience } from "@/types.ts";
 import ExperienceCard from "./ExperienceCard.astro";
+import background from "@/images/purple-sky.webp";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/images/experience/**/*.{svg,png,jpg}",
@@ -44,6 +45,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     View All
     <ion-icon name='arrow-forward-outline'></ion-icon>
   </a>
+  <Image class='background' src={background} alt='Background' />
 </section>
 <style>
   .card-image {
