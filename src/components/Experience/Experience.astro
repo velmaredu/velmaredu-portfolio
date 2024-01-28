@@ -1,7 +1,7 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import experience from "../../data/experience.json";
+import experiences from "../../data/experience.json";
 import "../../styles/experience.css";
 import { Side, type Experience } from "../../types.ts";
 import ExperienceCard from "./ExperienceCard.astro";
@@ -18,7 +18,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   </h2>
   <div class='timeline'>
     {
-      experience.map((experience: Experience, index: number) => (
+      experiences.map((experience: Experience, index: number) => (
         <div
           class={`experience-row ${index % 2 == 0 ? Side.left : Side.right}`}
         >
@@ -50,7 +50,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     height: 100%;
     width: auto;
     border-radius: 4%/10%;
-    box-sizing: border-box;
     object-fit: contain;
   }
 </style>

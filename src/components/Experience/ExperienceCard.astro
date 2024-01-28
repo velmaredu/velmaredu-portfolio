@@ -1,6 +1,9 @@
 ---
 import type { Experience, Side } from "../../types";
 
+const YEARMILIS: number = 31557600000;
+const MONTHMILIS: number = 2629800000;
+
 interface Props {
   experience: Experience;
   side: Side;
@@ -11,14 +14,25 @@ const { experience, side } = Astro.props;
 const getDurationInYearMonths = (start: string, end?: string) => {
   const startDate = new Date(start);
   const endDate = end ? new Date(end) : new Date();
-  let duration = "";
-  if (endDate.getFullYear() - startDate.getFullYear() > 0) {
-    duration += endDate.getFullYear() - startDate.getFullYear() + " years ";
+
+  const diffInMilis = endDate.getTime() - startDate.getTime();
+  const diffInMonths = Math.floor((diffInMilis % YEARMILIS) / MONTHMILIS);
+  const diffInYears = Math.floor(diffInMilis / YEARMILIS);
+
+  let text: string = "";
+  text += getTextFromDate(diffInMonths, "month") + " ";
+  text += getTextFromDate(diffInYears, "year");
+  return text;
+};
+
+const getTextFromDate = (count: number, name: string): string => {
+  if (count == 0) {
+    return "";
+  } else if (count == 1) {
+    return `${count} ${name}`;
+  } else {
+    return `${count} ${name}s`;
   }
-  if (endDate.getMonth() - startDate.getMonth() > 0) {
-    duration += endDate.getMonth() - startDate.getMonth() + " months";
-  }
-  return duration;
 };
 
 const formatDate = (date: string | undefined): string => {
@@ -40,16 +54,17 @@ const formatDate = (date: string | undefined): string => {
 
 <a
   class={`card ${experience.link ? "linked" : ""} ${side}`}
-  href={experience.link ? experience.link : null}
+  href={experience.link ?? null}
   target='_blank'
 >
   <slot />
   <div class='card-content'>
     <h4>{experience.name}</h4>
     <h6>{experience.role}</h6>
-    <p id='time-block'>
+    <p>
       {formatDate(experience.start)} - {formatDate(experience.end)}
-      ·
+    </p>
+    <p>
       {getDurationInYearMonths(experience.start, experience.end)}
     </p>
   </div>
@@ -57,12 +72,11 @@ const formatDate = (date: string | undefined): string => {
 <style>
   .card {
     display: flex;
-    height: 20vh;
-    justify-content: flex-end;
-    max-width: 80%;
-    color: white;
+    height: 25vh;
+    width: auto;
+    overflow: hidden;
     background-color: var(--prussian-blue);
-    border-radius: 4%/10%;
+    border-radius: 1rem;
     border: solid 1px black;
     transition:
       transform 0.3s,
@@ -82,8 +96,7 @@ const formatDate = (date: string | undefined): string => {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 5%;
-      flex-grow: 1;
+      padding: 1rem;
 
       h4 {
         text-wrap: nowrap;
@@ -91,12 +104,6 @@ const formatDate = (date: string | undefined): string => {
 
       h6 {
         color: #e0967d;
-      }
-
-      #time-block {
-        color: white;
-        text-wrap: nowrap;
-        flex-grow: 1;
       }
     }
   }
