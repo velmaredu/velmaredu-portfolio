@@ -6,7 +6,8 @@
   position: relative;
   overflow: hidden;
 
-  & > img {
+  &>img {
+    height: 100%;
     position: absolute;
     object-fit: cover;
     object-position: center center;
