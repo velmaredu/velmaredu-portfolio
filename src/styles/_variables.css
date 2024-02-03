@@ -1,4 +1,17 @@
 :root {
+  /* BUNKER PALETTE */
+  --bunker-50: #f1f8fa;
+  --bunker-100: #ddedf0;
+  --bunker-200: #bedae3;
+  --bunker-300: #91c0cf;
+  --bunker-400: #5d9db3;
+  --bunker-500: #428198;
+  --bunker-600: #396a81;
+  --bunker-700: #34586a;
+  --bunker-800: #314b59;
+  --bunker-900: #2c404d;
+  --bunker-950: #111b22;
+
   /* COLORS */
   --prussian-blue: #012840;
   --airforce-blue: #6593a6;
