@@ -16,9 +16,10 @@
       content: "";
       position: absolute;
       width: 0.5vw;
-      background: white;
+      background: var(--bunker-100);
       top: 0;
       bottom: 0;
+      border-radius: 0.25vw;
     }
 
     .experience-row {
@@ -38,7 +39,7 @@
         background-color: white;
         top: calc(50% - var(--circle-diameter) / 2);
         padding: calc(var(--circle-diameter)/ 10);
-        border: var(--circle-border-size) solid var(--safety-orange);
+        border: var(--circle-border-size) solid var(--bunker-800);
         border-radius: 50%;
       }
 

@@ -59,12 +59,10 @@ const formatDate = (date: string | undefined): string => {
 >
   <slot />
   <div class='card-content'>
-    <h4>{experience.name}</h4>
-    <h6>{experience.role}</h6>
+    <h4>{experience.role}</h4>
+    <h6>{experience.name}</h6>
     <p>
-      {formatDate(experience.start)} - {formatDate(experience.end)}
-    </p>
-    <p>
+      {formatDate(experience.start)} - {formatDate(experience.end)}<br />
       {getDurationInYearMonths(experience.start, experience.end)}
     </p>
   </div>
@@ -75,9 +73,8 @@ const formatDate = (date: string | undefined): string => {
     height: 25vh;
     width: auto;
     overflow: hidden;
-    background-color: var(--prussian-blue);
+    background-color: var(--bunker-950);
     border-radius: 1rem;
-    border: solid 1px black;
     transition:
       transform 0.3s,
       box-shadow 0.3s;
@@ -85,7 +82,7 @@ const formatDate = (date: string | undefined): string => {
     &.linked:hover {
       cursor: pointer;
       transform: scale(1.03);
-      box-shadow: -1px 5px 10px var(--prussian-blue);
+      box-shadow: 0 0 10px white;
     }
 
     &.right {
@@ -99,11 +96,19 @@ const formatDate = (date: string | undefined): string => {
       padding: 1rem;
 
       h4 {
+        font-weight: bold;
         text-wrap: nowrap;
+        color: var(--earth-yellow);
       }
 
       h6 {
-        color: #e0967d;
+        font-weight: bold;
+        color: var(--turquoise);
+      }
+
+      p {
+        color: #fbfaf8;
+        padding-block: 0.5rem;
       }
     }
   }
