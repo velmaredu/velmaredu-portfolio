@@ -5,14 +5,14 @@ import "../styles/education.css";
 import educationData from "../data/education.json";
 
 const educationImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/images/education/*.{svg,jpg,astro,png}"
+  "/src/images/education/*.{svg,jpg,astro,png}",
 );
 ---
 
 <section id='education'>
   <h2 class='section-title'>
     <ion-icon name='school-outline'></ion-icon>
-    My<span>Education</span>
+    Education
   </h2>
   <div class='container'>
     {

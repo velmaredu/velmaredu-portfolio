@@ -3,10 +3,6 @@
 #education {
   flex-direction: column;
 
-  h2 span {
-    color: var(--safety-orange);
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -18,13 +14,13 @@
       height: 30vh;
       overflow: hidden;
       border-radius: 1rem;
-      color: black;
-      background-color: whitesmoke;
+      background-color: var(--bunker-950);
       transition: 0.3s;
 
       &:hover {
+        cursor: pointer;
         transform: scale(1.03);
-        box-shadow: 0 0 1.2rem rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 10px white;
       }
 
       img {
@@ -41,12 +37,12 @@
         padding: 2vw;
 
         h3 {
-          color: var(--licorice);
+          color: var(--earth-yellow);
           font-weight: bold;
         }
 
         h4 {
-          color: var(--safety-orange);
+          color: var(--turquoise);
           font-weight: bold;
         }
       }
