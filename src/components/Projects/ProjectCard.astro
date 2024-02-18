@@ -11,10 +11,7 @@ const { project } = Astro.props;
 
 <FlipCard height='40vh'>
   <slot name='image' slot='front' />
-  <div
-    slot='back'
-    class='content h-full w-full flex justify-center items-center flex-col'
-  >
+  <div slot='back' class='content flex justify-center items-center flex-col'>
     <h5 class='title'>{project.name}</h5>
     <p>{project.desc}</p>
     <div class='buttons'>
@@ -47,7 +44,6 @@ const { project } = Astro.props;
 <style>
   .content {
     position: relative;
-    background-color: var(--prussian-blue);
     transition: top ease-in-out 1s;
 
     &:hover {
@@ -69,30 +65,5 @@ const { project } = Astro.props;
     justify-content: space-evenly;
     width: 100%;
     padding: 1rem;
-
-    .icon {
-      transition: all ease-in-out 0.2s;
-    }
-
-    a {
-      gap: 0.5vw;
-      border-radius: 1rem;
-      padding: 0.5rem 1rem;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--airforce-blue);
-
-      svg {
-        transition: transform 0.3s ease-in-out;
-      }
-    }
-
-    .btn-left:hover .icon {
-      transform: translateX(-5px);
-    }
-
-    .btn-right:hover .icon {
-      transform: translateX(5px);
-    }
   }
 </style>

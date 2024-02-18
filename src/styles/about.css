@@ -7,7 +7,7 @@
     font-weight: bold;
 
     span {
-      color: var(--fluorescent-cyan);
+      color: var(--turquoise);
     }
   }
 
@@ -30,16 +30,7 @@
       gap: 1vw;
 
       p strong {
-        color: var(--safety-orange);
-      }
-
-      li {
-        gap: 1rem;
-
-        span {
-          font-weight: bold;
-          color: var(--safety-orange);
-        }
+        color: var(--earth-yellow);
       }
     }
   }
