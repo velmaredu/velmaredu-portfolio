@@ -3,18 +3,6 @@
 #projects {
   --box-height: 50vh;
   flex-direction: column;
-  overflow: hidden;
-
-  h2 {
-    padding: 0.5rem 1rem;
-    border-radius: 3rem;
-    background: black;
-    box-shadow: 0px 1px 20px black;
-
-    span {
-      color: var(--fluorescent-cyan);
-    }
-  }
 
   #projectsContainer {
     display: grid;

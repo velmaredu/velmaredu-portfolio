@@ -10,7 +10,7 @@ interface Props {
 
 const { name, imagePath, altText } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/icons/*.{svg, astro}"
+  "/src/icons/*.{svg, astro}",
 );
 ---
 
@@ -30,9 +30,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     padding: 10% 5%;
     cursor: pointer;
     border-radius: 1rem;
-    box-shadow: 0 0 20px black;
-    background: black;
-    transition: 0.2s;
+    box-shadow: 0 0 20px var(--bunker-950);
+    background: var(--bunker-950);
+    transition: 0.3s;
     gap: 15%;
 
     img {
@@ -44,12 +44,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     }
 
     &:hover {
-      box-shadow: 0 0 20px white;
-      background: white;
-
-      h6 {
-        color: black;
-      }
+      box-shadow: 0 0 10px white;
+      transform: scale(1.03);
     }
   }
 </style>

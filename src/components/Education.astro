@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
-import "../styles/education.css";
+import { Image } from "astro:assets";
 import educationData from "../data/education.json";
+import "../styles/education.css";
 
 const educationImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/images/education/*.{svg,jpg,astro,png}",

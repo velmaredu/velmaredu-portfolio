@@ -4,17 +4,6 @@
   flex-direction: column;
   overflow: hidden;
 
-  h2 {
-    padding: 0.5rem 1rem;
-    border-radius: 3rem;
-    background: black;
-    box-shadow: 0px 1px 20px black;
-
-    span {
-      color: var(--fluorescent-cyan);
-    }
-  }
-
   #skillsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));

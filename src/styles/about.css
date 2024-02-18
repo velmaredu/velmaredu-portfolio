@@ -3,14 +3,6 @@
 #about {
   flex-direction: column;
 
-  h2 {
-    font-weight: bold;
-
-    span {
-      color: var(--turquoise);
-    }
-  }
-
   .core {
     display: flex;
     justify-content: center;

@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
 import skillsData from "@/data/skills.json";
-import background from "@/images/mp_warm.webp";
 import "@/styles/skills.css";
 import SkillCard from "./SkillCard.astro";
 ---
@@ -9,7 +7,7 @@ import SkillCard from "./SkillCard.astro";
 <section id='skills'>
   <h2 class='section-title'>
     <ion-icon name='laptop-outline'></ion-icon>
-    <span>Skills</span>&<span>Abilities</span>
+    Skills
   </h2>
   <div id='skillsContainer'>
     {
@@ -22,5 +20,4 @@ import SkillCard from "./SkillCard.astro";
       ))
     }
   </div>
-  <Image class='background' src={background} alt='Background' />
 </section>

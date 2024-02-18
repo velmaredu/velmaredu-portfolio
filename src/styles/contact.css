@@ -1,10 +1,6 @@
 #contact {
     flex-direction: column;
 
-    .section-title span {
-        color: var(--fluorescent-cyan);
-    }
-
     .card {
         display: flex;
         justify-content: center;
@@ -13,9 +9,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         border-radius: 1.5rem;
-
+        background-color: var(--bunker-950);
         gap: 2vw;
-        box-shadow: 0 0 10px white;
+        box-shadow: 0 0 10px var(--bunker-50);
         overflow: hidden;
 
         img {
