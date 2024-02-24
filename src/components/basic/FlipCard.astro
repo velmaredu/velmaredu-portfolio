@@ -1,13 +1,14 @@
 ---
 interface Props {
+  class: string;
   height?: string;
   width?: string;
 }
 
-const { height = "auto", width = "auto" } = Astro.props;
+const { class: className, height = "auto", width = "auto" } = Astro.props;
 ---
 
-<div class='flip-card'>
+<div class:list={["flip-card", className]}>
   <div class='front'>
     <slot name='front' />
   </div>

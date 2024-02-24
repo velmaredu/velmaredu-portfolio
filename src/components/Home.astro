@@ -6,13 +6,6 @@ import profileImage from "@/images/me/graduate.webp";
 import "@/styles/home.css";
 import { Image } from "astro:assets";
 import TypingText from "./TypingText.astro";
-
-const phrases = [
-  "full-stack development",
-  "photo editing",
-  "branding",
-  "logo creation",
-];
 ---
 
 <section id='home'>
@@ -22,7 +15,7 @@ const phrases = [
       I am <span>Eduardo Velasco</span>
     </h1>
     <h2>
-      I am into <TypingText phrases={phrases} />
+      I am into <TypingText />
     </h2>
     <a class='btn' href='#about'>
       About Me
@@ -56,5 +49,5 @@ const phrases = [
       </a>
     </nav>
   </div>
-  <Image src={profileImage} draggable='false' alt='Profile photo' />
+  <Image src={profileImage} draggable='false' alt='Hero' loading={"eager"} />
 </section>

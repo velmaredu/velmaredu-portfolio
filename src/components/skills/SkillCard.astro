@@ -10,12 +10,17 @@ interface Props {
 
 const { name, imagePath, altText } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/icons/*.{svg, astro}",
+  "/src/icons/*.{svg, astro}"
 );
 ---
 
-<div class='card'>
-  <Image src={images[imagePath]()} alt={altText} {...Astro.props} />
+<div class='card reveal'>
+  <Image
+    src={images[imagePath]()}
+    alt={altText}
+    loading={"eager"}
+    {...Astro.props}
+  />
   <h6>{name}</h6>
 </div>
 <style>

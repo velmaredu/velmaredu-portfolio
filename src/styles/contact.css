@@ -11,7 +11,7 @@
         border-radius: 1.5rem;
         background-color: var(--bunker-950);
         gap: 2vw;
-        box-shadow: 0 0 10px var(--bunker-50);
+        box-shadow: 0 0 5px var(--bunker-500);
         overflow: hidden;
 
         img {

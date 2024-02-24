@@ -7,12 +7,12 @@ import type { Project } from "../../types.ts";
 import ProjectCard from "./ProjectCard.astro";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/images/projects/*.{svg,png,astro,webp,avif}",
+  "/src/images/projects/*.{svg,png,astro,webp,avif}"
 );
 ---
 
 <section id='projects'>
-  <h2 class='section-title'>
+  <h2 class='section-title reveal'>
     <ion-icon name='bug-outline'></ion-icon>
     Projects
   </h2>
@@ -26,12 +26,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             src={images[`/src/images/projects/${project.image}`]()}
             draggable='false'
             alt='project'
+            loading={"eager"}
           />
         </ProjectCard>
       ))
     }
   </div>
-  <a href='/projects' class='btn'>
+  <a href='/projects' class='btn reveal'>
     View All
     <ion-icon name='arrow-forward-outline'></ion-icon>
   </a>

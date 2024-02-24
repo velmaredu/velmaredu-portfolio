@@ -16,6 +16,9 @@
   --turquoise: #49dcb1ff;
   --turquoise-light: #92f8d9;
 
+  /* BUNKER FOR OPACITY */
+  --bunker-950-rgb: 17, 27, 34;
+
   /* COLORS */
   --earth-yellow: #ffc979;
   --prussian-blue: #012840;
@@ -26,4 +29,11 @@
 
   /* DIMENSIONS */
   --header-height: 8vh;
+
+  /* PALETTE 1 */
+  /* CSS HEX */
+  --light-coral: #ef767aff;
+  --keppel: #49beaaff;
+  --rich-black: #111b22ff;
+
 }

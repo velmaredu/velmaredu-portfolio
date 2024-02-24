@@ -7,12 +7,12 @@ import { Image } from "astro:assets";
 import ExperienceCard from "./ExperienceCard.astro";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/images/experience/**/*.{svg,png,jpg}",
+  "/src/images/experience/**/*.{svg,png,jpg}"
 );
 ---
 
 <section id='experience'>
-  <h2 class='section-title'>
+  <h2 class='section-title reveal'>
     <ion-icon name='briefcase-outline'></ion-icon>
     Experience
   </h2>
@@ -20,7 +20,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     {
       experiences.map((experience: Experience, index: number) => (
         <div
-          class={`experience-row ${index % 2 == 0 ? Side.left : Side.right}`}
+          class={`experience-row reveal ${index % 2 == 0 ? Side.left : Side.right}`}
         >
           <div class='circle'>
             <ion-icon name='briefcase' />
@@ -33,6 +33,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               class='card-image'
               src={images[experience.icon]()}
               draggable='false'
+              loading={"eager"}
               alt={experience.name}
             />
           </ExperienceCard>
@@ -40,7 +41,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       ))
     }
   </div>
-  <a href='/experience/experience.html' class='btn'>
+  <a href='/experience/experience.html' class='btn reveal'>
     View All
     <ion-icon name='arrow-forward-outline'></ion-icon>
   </a>

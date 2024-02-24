@@ -5,13 +5,19 @@ import profileImage from "../images/me/horizon.webp";
 ---
 
 <section id='about'>
-  <h2 class='section-title'>
+  <h2 class='section-title reveal'>
     <ion-icon name='person-outline'></ion-icon>
     About Me
   </h2>
   <div class='core'>
-    <Image src={profileImage} draggable='false' alt='Profile' />
-    <div class='content'>
+    <Image
+      class='reveal'
+      src={profileImage}
+      draggable='false'
+      alt='Profile'
+      loading={"eager"}
+    />
+    <div class='content reveal'>
       <p>
         Hi, I'm Eduardo, and I'm delighted to have you here exploring my
         universe! I'm much more than lines of code and algorithms; I'm a
@@ -38,7 +44,7 @@ import profileImage from "../images/me/horizon.webp";
     </div>
   </div>
   <a
-    class='btn'
+    class='btn reveal'
     href='/data/VelascoMartínezEduardo_EN.pdf'
     download='VelascoMartínezEduardo.pdf'
   >

@@ -6,14 +6,19 @@ import { Image } from "astro:assets";
 ---
 
 <section id='contact'>
-  <h2 class='section-title'>
+  <h2 class='section-title reveal'>
     <Headset class='size-10' />
     Get in Touch
   </h2>
 
-  <div class='card'>
+  <div class='card reveal'>
     <div class='image'>
-      <Image src={contactImg} draggable='false' alt='Contact' />
+      <Image
+        src={contactImg}
+        draggable='false'
+        alt='Contact'
+        loading={"eager"}
+      />
     </div>
     <form action='https://formspree.io/f/moqzenlb' method='POST'>
       <div class='field'>

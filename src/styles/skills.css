@@ -2,7 +2,6 @@
 
 #skills {
   flex-direction: column;
-  overflow: hidden;
 
   #skillsContainer {
     display: grid;
