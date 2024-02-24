@@ -46,9 +46,9 @@
   }
 
   img:not(.background) {
-    height: auto;
-    width: 15rem;
-    height: 15rem;
+    max-height: 50vh;
+    width: auto;
+    object-fit: cover;
     border-radius: 100%;
   }
 }
