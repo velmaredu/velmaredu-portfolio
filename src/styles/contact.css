@@ -10,11 +10,12 @@
         flex-wrap: wrap;
         border-radius: 1.5rem;
         background-color: var(--bunker-950);
-        gap: 2vw;
+        gap: 1vw;
         box-shadow: 0 0 5px var(--bunker-500);
         overflow: hidden;
 
         img {
+            padding: 10%;
             max-height: 70vh;
             width: auto;
         }
@@ -25,7 +26,7 @@
             justify-content: center;
             align-items: center;
             gap: 1vw;
-            padding: 2vh 1vw;
+            padding: 2vh 2vw;
             min-width: 30vw;
 
             .field {
