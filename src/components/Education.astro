@@ -5,7 +5,7 @@ import educationData from "../data/education.json";
 import "../styles/education.css";
 
 const educationImages = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/images/education/*.{svg,jpg,astro,png}",
+  "/src/images/education/*.{svg,jpg,astro,png}"
 );
 ---
 
@@ -17,7 +17,11 @@ const educationImages = import.meta.glob<{ default: ImageMetadata }>(
   <div class='container'>
     {
       educationData.map((education) => (
-        <a href={education.link}>
+        <a
+          href={education.link}
+          target='_blank'
+          rel='noopener noreferer nofollow'
+        >
           <Image
             src={educationImages[education.logo]()}
             alt='education'

@@ -12,7 +12,6 @@ const pages = [
 ---
 
 <header>
-  <!-- <AccountCircle /> -->
   <a href='/'>
     <span>Eduardo Velasco</span>
   </a>
@@ -37,14 +36,14 @@ const pages = [
     $navAElements.forEach((a) => {
       const selectionForSection = a.getAttribute("href")?.substring(1);
       const sectionElement: HTMLDivElement | null = document.querySelector(
-        selectionForSection || "",
+        selectionForSection || ""
       );
 
       if (!sectionElement) return;
       const selectionTop = sectionElement.offsetTop - 150;
       if (window.scrollY <= selectionTop) return;
       $navAElements.forEach((aToRemove) =>
-        aToRemove.classList.remove("active"),
+        aToRemove.classList.remove("active")
       );
       a.classList.add("active");
     });
