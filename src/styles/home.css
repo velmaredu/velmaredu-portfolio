@@ -16,9 +16,10 @@
       font-weight: bold;
     }
 
-    h2 span {
-      font-weight: bold;
-      color: var(--turquoise);
+    h2 {
+      display: flex;
+      gap: 0.5ch;
+      text-wrap: nowrap;
     }
 
     nav {

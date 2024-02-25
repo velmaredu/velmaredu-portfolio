@@ -1,12 +1,38 @@
-<span class='typing-text text-red-500'></span>
+---
+interface Props {
+  phrases: string[];
+  styles: string;
+}
+const { phrases, styles } = Astro.props;
+const width = phrases.reduce((max, phrase) => Math.max(max, phrase.length), 0);
+---
+
+<span class='typing-text-container' style={styles}>
+  <span-typing class='typing-text' data-phrases={phrases}></span-typing>
+</span>
+<style define:vars={{ width }}>
+  .typing-text-container {
+    display: block;
+    width: calc(var(--width) * 1ch);
+  }
+</style>
 <script>
   import Typed from "typed.js";
 
-  var typed = new Typed(".typing-text", {
-    strings: ["full-stack", "photo editing", "branding", "logo creation"],
-    loop: true,
-    typeSpeed: 40,
-    backSpeed: 25,
-    backDelay: 600,
-  });
+  class TypingText extends HTMLElement {
+    constructor() {
+      super();
+
+      const phrases = this.dataset.phrases?.split(",") || [];
+      var typed = new Typed(".typing-text", {
+        strings: phrases,
+        loop: true,
+        typeSpeed: 40,
+        backSpeed: 25,
+        backDelay: 600,
+      });
+    }
+  }
+
+  customElements.define("span-typing", TypingText);
 </script>

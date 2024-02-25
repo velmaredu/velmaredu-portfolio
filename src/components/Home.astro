@@ -6,6 +6,8 @@ import profileImage from "@/images/me/graduate.webp";
 import "@/styles/home.css";
 import { Image } from "astro:assets";
 import TypingText from "./TypingText.astro";
+
+const phrases = ["full-stack", "photo editing", "branding", "logo creation"];
 ---
 
 <section id='home'>
@@ -15,7 +17,11 @@ import TypingText from "./TypingText.astro";
       I am <span>Eduardo Velasco</span>
     </h1>
     <h2>
-      I am into <TypingText />
+      I am into
+      <TypingText
+        phrases={phrases}
+        styles='color: var(--turquoise); font-weight: bold;'
+      />
     </h2>
     <a class='btn' href='#about'>
       About Me
