@@ -1,14 +1,13 @@
 @import "_variables.css";
 
 #projects {
-  --box-height: 50vh;
   flex-direction: column;
 
   #projectsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr));
     width: 100%;
-    gap: 3vh;
+    gap: 3vw;
   }
 
   a {

@@ -58,6 +58,10 @@ const { title } = Astro.props;
     }
   }
 
+  main {
+    width: 100%;
+  }
+
   a {
     text-decoration: none;
   }
@@ -127,13 +131,12 @@ const { title } = Astro.props;
     gap: 0.25rem;
     font-weight: bold;
     font-size: 1.25rem;
-    background-color: var(--bunker-800) !important;
+    background-color: var(--bunker-800);
     transition: 0.3s ease-in-out;
 
     &:hover {
       color: black;
-      background-color: var(--turquoise-light) !important;
-      /* background-color: var(--bunker-200) !important; */
+      background-color: var(--turquoise-light);
       transition: all 0.3s ease-in-out;
     }
   }
