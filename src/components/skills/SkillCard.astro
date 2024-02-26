@@ -25,13 +25,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 </div>
 <style>
   .card {
-    --cardSize: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: var(--cardSize);
-    width: var(--cardSize);
     padding: 10% 5%;
     cursor: pointer;
     border-radius: 1rem;
@@ -39,6 +36,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     background: var(--bunker-950);
     transition: 0.3s;
     gap: 15%;
+    aspect-ratio: 1/1;
 
     img {
       height: 65%;
