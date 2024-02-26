@@ -9,8 +9,4 @@
     width: 100%;
     gap: 3vw;
   }
-
-  a {
-    background-color: var(--airforce-blue);
-  }
 }
