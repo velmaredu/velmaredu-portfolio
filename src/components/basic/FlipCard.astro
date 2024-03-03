@@ -17,11 +17,9 @@ const { class: className, height = "auto", width = "auto" } = Astro.props;
   </div>
 </div>
 
-<style define:vars={{ height, width }}>
+<style>
   .flip-card {
     position: relative;
-    height: var(--height);
-    width: var(--width);
 
     > .front,
     > .back {

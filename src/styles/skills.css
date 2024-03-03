@@ -11,3 +11,11 @@
     gap: 3vh;
   }
 }
+
+@media (max-width: 640px) {
+  #skills {
+    #skillsContainer {
+      grid-template-columns: repeat(auto-fill, minmax(15vh, 1fr));
+    }
+  }
+}

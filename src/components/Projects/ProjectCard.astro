@@ -9,7 +9,7 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<FlipCard class='reveal' height='40vh'>
+<FlipCard class='reveal'>
   <slot name='image' slot='front' />
   <div slot='back' class='content flex justify-center items-center flex-col'>
     <h5 class='title'>{project.name}</h5>

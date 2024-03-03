@@ -11,24 +11,21 @@
     gap: 10vw;
 
     img {
-      width: 20%;
+      max-height: 70vh;
+      min-height: 50vh;
+      width: auto;
       border-radius: 2.5rem;
     }
 
     .content {
       display: flex;
       flex-direction: column;
-      width: 70ch;
-      gap: 1vw;
+      max-width: 70ch;
+      gap: 1rem;
 
       p strong {
         color: var(--earth-yellow);
       }
     }
-  }
-
-  &>a {
-    background-color: var(--airforce-blue);
-    font-size: 1.25rem;
   }
 }

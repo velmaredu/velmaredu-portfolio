@@ -12,19 +12,16 @@ const pages = [
 ---
 
 <header>
-  <a href='/'>
-    <span>Eduardo Velasco</span>
-  </a>
+  <a href='/'>Eduardo Velasco</a>
 
-  <nav>
+  <nav class='hidden md:flex'>
     {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
   </nav>
 
-  <button id='menu' style='display: none;'>
-    <!-- <MenuIcon /> -->
-  </button>
+  <ion-icon name='menu' class='flex md:hidden'></ion-icon>
+
   <nav style='display: none;'>
-    {pages.map((page) => <a href={`/#${page}`}>{page}</a>)}
+    {pages.map((page) => <a href={`/${page.toLowerCase()}`}>{page}</a>)}
   </nav>
 </header>
 <script>

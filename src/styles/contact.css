@@ -5,9 +5,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: fit-content;
         flex-direction: row;
-        flex-wrap: wrap;
         border-radius: 1.5rem;
         background-color: var(--bunker-950);
         gap: 1vw;
@@ -16,7 +14,7 @@
 
         img {
             padding: 10%;
-            max-height: 70vh;
+            max-height: 60vh;
             width: auto;
         }
 
@@ -57,9 +55,26 @@
                 }
             }
 
+            button:not(:hover) {
+                background-color: var(--bunker-800);
+            }
+        }
+    }
+}
 
-            button {
-                background-color: var(--airforce-blue);
+@media (max-width: 768px) {
+    #contact {
+        .card {
+            flex-direction: column;
+            width: 100%;
+
+            img {
+                max-height: 50vh;
+                width: auto;
+            }
+
+            form {
+                width: 100%;
             }
         }
     }

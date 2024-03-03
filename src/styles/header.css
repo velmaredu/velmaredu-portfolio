@@ -40,6 +40,11 @@ header {
       }
     }
   }
+
+  #menu {
+    color: white;
+    background-color: transparent;
+  }
 }
 
 @keyframes fade {
