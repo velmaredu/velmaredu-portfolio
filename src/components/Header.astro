@@ -1,5 +1,7 @@
 ---
 import "../styles/header.css";
+import MenuIcon from "@/icons/MenuIcon.astro";
+
 const pages = [
   "Home",
   "Experience",
@@ -18,13 +20,17 @@ const pages = [
     {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
   </nav>
 
-  <ion-icon name='menu' class='flex md:hidden'></ion-icon>
+  <a id='hamburguer' role='button' aria-expanded='false' aria-controls='menu'>
+    <MenuIcon />
+  </a>
 
-  <nav style='display: none;'>
-    {pages.map((page) => <a href={`/${page.toLowerCase()}`}>{page}</a>)}
+  <nav id='mobile-nav'>
+    {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
+    <div class='splash'></div>
   </nav>
 </header>
 <script>
+  //Highliht the active section in the nav
   const $navAElements: Element[] = [
     ...document.querySelectorAll("header nav a"),
   ];
@@ -43,6 +49,35 @@ const pages = [
         aToRemove.classList.remove("active")
       );
       a.classList.add("active");
+    });
+  });
+
+  // TOGGLE MOBILE NAV
+  const nav: HTMLElement = document.querySelector("#mobile-nav") as HTMLElement;
+  const menuIcon: HTMLElement = document.querySelector(
+    "#hamburguer"
+  ) as HTMLElement;
+  const navLinks: NodeListOf<Element> =
+    document.querySelectorAll("#mobile-nav a");
+  let isMenuOpen = false;
+
+  menuIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    isMenuOpen = !isMenuOpen;
+
+    menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
+    menuIcon.classList.toggle("open");
+    nav.hidden = !isMenuOpen;
+    nav.classList.toggle("open");
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      isMenuOpen = false;
+      menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
+      menuIcon.classList.remove("open");
+      nav.hidden = true;
+      nav.classList.remove("open");
     });
   });
 </script>
