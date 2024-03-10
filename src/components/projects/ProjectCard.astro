@@ -1,0 +1,69 @@
+---
+import type { Project } from "../../types";
+import FlipCard from "../basic/FlipCard.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<FlipCard class='reveal'>
+  <slot name='image' slot='front' />
+  <div slot='back' class='content flex justify-center items-center flex-col'>
+    <h5 class='title'>{project.name}</h5>
+    <p>{project.desc}</p>
+    <div class='buttons'>
+      <a
+        href={project.links.view}
+        class='btn btn-left'
+        target='_blank'
+        rel='noopener noreferer nofollow'
+      >
+        <ion-icon name='eye-sharp' class='icon'></ion-icon>
+        View
+      </a>
+      {
+        project.links.code && (
+          <a
+            href={project.links.code}
+            class='btn btn-right'
+            target='_blank'
+            rel='noopener noreferer nofollow'
+          >
+            Code
+            <ion-icon name='code-slash-sharp' class='icon' />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</FlipCard>
+
+<style>
+  .content {
+    position: relative;
+    transition: top ease-in-out 1s;
+
+    &:hover {
+      top: auto;
+    }
+
+    p {
+      padding: 2% 3%;
+    }
+
+    h5 {
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem;
+  }
+</style>

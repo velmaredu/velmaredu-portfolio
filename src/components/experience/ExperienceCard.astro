@@ -1,0 +1,116 @@
+---
+import type { Experience, Side } from "../../types";
+
+const YEARMILIS: number = 31557600000;
+const MONTHMILIS: number = 2629800000;
+
+interface Props {
+  experience: Experience;
+  side: Side;
+}
+
+const { experience, side } = Astro.props;
+
+const getDurationInYearMonths = (start: string, end?: string) => {
+  const startDate = new Date(start);
+  const endDate = end ? new Date(end) : new Date();
+
+  const diffInMilis = endDate.getTime() - startDate.getTime();
+  const diffInMonths = Math.floor((diffInMilis % YEARMILIS) / MONTHMILIS);
+  const diffInYears = Math.floor(diffInMilis / YEARMILIS);
+
+  let text: string = "";
+  text += getTextFromDate(diffInMonths, "month") + " ";
+  text += getTextFromDate(diffInYears, "year");
+  return text;
+};
+
+const getTextFromDate = (count: number, name: string): string => {
+  if (count == 0) {
+    return "";
+  } else if (count == 1) {
+    return `${count} ${name}`;
+  } else {
+    return `${count} ${name}s`;
+  }
+};
+
+const formatDate = (date: string | undefined): string => {
+  if (!date) {
+    return "present";
+  }
+
+  const dateConverted = new Date(date);
+
+  const year = dateConverted.getFullYear();
+  const month = dateConverted.getMonth() + 1;
+
+  const monthName = new Intl.DateTimeFormat(undefined, {
+    month: "short",
+  }).format(new Date(`${year}-${month}-01`));
+  return `${monthName}. ${year}`;
+};
+---
+
+<a
+  class={`card ${experience.link ? "linked" : ""} ${side} noreveal`}
+  href={experience.link ?? null}
+  target='_blank'
+  rel='noopener noreferer nofollow'
+>
+  <slot />
+  <div class='card-content'>
+    <h4>{experience.role}</h4>
+    <h6>{experience.name}</h6>
+    <p>
+      {formatDate(experience.start)} - {formatDate(experience.end)}<br />
+      {getDurationInYearMonths(experience.start, experience.end)}
+    </p>
+  </div>
+</a>
+<style>
+  .card {
+    display: flex;
+    height: 25vh;
+    width: auto;
+    overflow: hidden;
+    background-color: var(--bunker-950);
+    border-radius: 1rem;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+
+    &.linked:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      box-shadow: 0 0 10px white;
+    }
+
+    &.right {
+      flex-direction: row-reverse;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+
+      h4 {
+        font-weight: bold;
+        text-wrap: nowrap;
+        color: var(--earth-yellow);
+      }
+
+      h6 {
+        font-weight: bold;
+        color: var(--turquoise);
+      }
+
+      p {
+        color: #fbfaf8;
+        padding-block: 0.5rem;
+      }
+    }
+  }
+</style>
