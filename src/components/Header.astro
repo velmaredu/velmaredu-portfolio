@@ -15,19 +15,13 @@ const pages = [
 
 <header>
   <a href='/'>Eduardo Velasco</a>
-
-  <nav class='hidden md:flex'>
-    {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
-  </nav>
-
-  <a id='hamburguer' role='button' aria-expanded='false' aria-controls='menu'>
-    <MenuIcon />
-  </a>
-
-  <nav id='mobile-nav'>
+  <nav>
     {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
     <div class='splash'></div>
   </nav>
+  <a id='hamburguer' role='button' aria-expanded='false' aria-controls='menu'>
+    <MenuIcon />
+  </a>
 </header>
 <script>
   //Highliht the active section in the nav
@@ -53,31 +47,32 @@ const pages = [
   });
 
   // TOGGLE MOBILE NAV
-  const nav: HTMLElement = document.querySelector("#mobile-nav") as HTMLElement;
-  const menuIcon: HTMLElement = document.querySelector(
-    "#hamburguer"
-  ) as HTMLElement;
-  const navLinks: NodeListOf<Element> =
-    document.querySelectorAll("#mobile-nav a");
-  let isMenuOpen = false;
+  if (window.innerWidth <= 768) {
+    const nav: HTMLElement = document.querySelector("nav") as HTMLElement;
+    const menuIcon: HTMLElement = document.querySelector(
+      "#hamburguer"
+    ) as HTMLElement;
+    const navLinks: NodeListOf<Element> = document.querySelectorAll("nav a");
+    let isMenuOpen = false;
 
-  menuIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    isMenuOpen = !isMenuOpen;
+    menuIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      isMenuOpen = !isMenuOpen;
 
-    menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
-    menuIcon.classList.toggle("open");
-    nav.hidden = !isMenuOpen;
-    nav.classList.toggle("open");
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      isMenuOpen = false;
       menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
-      menuIcon.classList.remove("open");
-      nav.hidden = true;
-      nav.classList.remove("open");
+      menuIcon.classList.toggle("open");
+      nav.hidden = !isMenuOpen;
+      nav.classList.toggle("open");
     });
-  });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        isMenuOpen = false;
+        menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
+        menuIcon.classList.remove("open");
+        nav.hidden = true;
+        nav.classList.remove("open");
+      });
+    });
+  }
 </script>
