@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import netlify from "@astrojs/netlify";
 
 export default defineConfig({
+  site: "https://velmaredu.github.io",
   integrations: [
     tailwind({
       nesting: true,
