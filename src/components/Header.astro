@@ -46,33 +46,52 @@ const pages = [
     });
   });
 
-  // TOGGLE MOBILE NAV
-  if (window.innerWidth <= 768) {
+  function switchNavVisibility(nav: HTMLElement, menuIcon: HTMLElement) {
+    nav.classList.toggle("open");
+    menuIcon.classList.toggle("open");
+  }
+
+  function activeMobileMenuIconActions() {
     const nav: HTMLElement = document.querySelector("nav") as HTMLElement;
     const menuIcon: HTMLElement = document.querySelector(
       "#hamburguer"
     ) as HTMLElement;
-    const navLinks: NodeListOf<Element> = document.querySelectorAll("nav a");
-    let isMenuOpen = false;
-
-    menuIcon.addEventListener("click", (e) => {
-      e.preventDefault();
-      isMenuOpen = !isMenuOpen;
-
-      menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
-      menuIcon.classList.toggle("open");
-      nav.hidden = !isMenuOpen;
-      nav.classList.toggle("open");
-    });
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        isMenuOpen = false;
-        menuIcon.setAttribute("aria-expanded", String(isMenuOpen));
-        menuIcon.classList.remove("open");
-        nav.hidden = true;
-        nav.classList.remove("open");
-      });
-    });
+    menuIcon.setAttribute("aria-expanded", String(nav.hidden));
+    switchNavVisibility(nav, menuIcon);
   }
+
+  function activeMobileNavLinkActions() {
+    const nav: HTMLElement = document.querySelector("nav") as HTMLElement;
+    const menuIcon: HTMLElement = document.querySelector(
+      "#hamburguer"
+    ) as HTMLElement;
+    menuIcon.setAttribute("aria-expanded", String(false));
+    switchNavVisibility(nav, menuIcon);
+  }
+
+  function toggleMobileNav() {
+    const navLinks: NodeListOf<Element> = document.querySelectorAll("nav a");
+    const menuIcon: HTMLElement = document.querySelector(
+      "#hamburguer"
+    ) as HTMLElement;
+    const nav: HTMLElement = document.querySelector("nav") as HTMLElement;
+
+    if (window.innerWidth <= 768) {
+      menuIcon.classList.remove("open");
+      nav.classList.remove("open");
+      menuIcon.addEventListener("click", activeMobileMenuIconActions);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", activeMobileNavLinkActions);
+      });
+    } else {
+      menuIcon.removeEventListener("click", activeMobileMenuIconActions);
+      navLinks.forEach((link) => {
+        link.removeEventListener("click", activeMobileNavLinkActions);
+      });
+    }
+  }
+
+  toggleMobileNav();
+  window.addEventListener("resize", toggleMobileNav);
 </script>
