@@ -39,65 +39,6 @@ header {
         color: var(--earth-yellow);
       }
     }
-  }
-
-  #hamburguer {
-    z-index: 3;
-    display: none;
-
-    &.open {
-      color: white;
-      transform: rotate(180deg);
-
-      .bar:nth-child(1),
-      .bar:nth-child(4) {
-        opacity: 0;
-      }
-
-      .bar:nth-child(2) {
-        transform: rotate(45deg);
-      }
-
-      .bar:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
-  #mobile-nav {
-    display: flex;
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    gap: 1rem;
-    z-index: 2;
-    transition: all .3s ease-in;
-
-    a {
-      z-index: 2;
-      opacity: 0;
-      transform: translateY(-40px);
-    }
-
-    &:target,
-    &.open {
-      visibility: visible;
-
-      >.splash::after {
-        transition: all .3s ease-in;
-        transform: scale(1);
-      }
-
-      a {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
     .splash {
       position: absolute;
@@ -123,11 +64,72 @@ header {
       }
     }
   }
+
+  #hamburguer {
+    z-index: 3;
+    display: none;
+
+    &.open {
+      color: white;
+      transform: rotate(180deg);
+
+      .bar:nth-child(1),
+      .bar:nth-child(4) {
+        opacity: 0;
+      }
+
+      .bar:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      .bar:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  header #hamburguer {
-    display: flex;
+  header {
+    nav {
+      display: flex;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 2;
+      transition: all .3s ease-in;
+
+      a {
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+
+      &:target,
+      &.open {
+        visibility: visible;
+
+        >.splash::after {
+          transition: all .3s ease-in;
+          transform: scale(1);
+        }
+
+        a {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    #hamburguer {
+      display: flex;
+    }
   }
 }
 
