@@ -95,10 +95,10 @@ const formatDate = (date: string | undefined): string => {
       flex-direction: column;
       justify-content: center;
       padding: 1rem;
+      min-width: 50%;
 
       h4 {
         font-weight: bold;
-        text-wrap: nowrap;
         color: var(--earth-yellow);
       }
 
@@ -111,6 +111,13 @@ const formatDate = (date: string | undefined): string => {
         color: #fbfaf8;
         padding-block: 0.5rem;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column !important;
+      height: auto;
     }
   }
 </style>
