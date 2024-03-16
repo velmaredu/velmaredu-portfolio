@@ -19,7 +19,13 @@ const pages = [
     {pages.map((page) => <a href={`/#${page.toLowerCase()}`}>{page}</a>)}
     <div class='splash'></div>
   </nav>
-  <a id='hamburguer' role='button' aria-expanded='false' aria-controls='menu'>
+  <a
+    id='hamburguer'
+    class='h-[70%]'
+    role='button'
+    aria-expanded='false'
+    aria-controls='menu'
+  >
     <MenuIcon />
   </a>
 </header>
@@ -70,7 +76,8 @@ const pages = [
   }
 
   function toggleMobileNav() {
-    const navLinks: NodeListOf<Element> = document.querySelectorAll("nav a");
+    const navLinks: NodeListOf<Element> =
+      document.querySelectorAll("header nav a");
     const menuIcon: HTMLElement = document.querySelector(
       "#hamburguer"
     ) as HTMLElement;

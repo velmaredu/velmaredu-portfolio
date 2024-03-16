@@ -36,6 +36,7 @@
         justify-content: center;
         width: fit-content;
         padding: 2vw;
+        gap: 1vh;
 
         h3 {
           color: var(--earth-yellow);

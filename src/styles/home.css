@@ -12,7 +12,7 @@
     gap: 4vh;
     min-width: 60%;
 
-    h1 span {
+    h1 strong {
       color: var(--earth-yellow);
       font-weight: bold;
     }

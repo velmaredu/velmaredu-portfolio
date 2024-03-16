@@ -2,7 +2,8 @@ footer {
     padding: 1rem 2.5rem;
     text-align: center;
 
-    span {
-        color: var(--turquoise)
+    strong {
+        color: var(--turquoise);
+        text-wrap: nowrap;
     }
 }
