@@ -1,21 +1,31 @@
 [
     {
-        "name": "Portfolio",
-        "desc": "My personal portfolio developed with HTML, CSS, and JS.",
-        "image": "portfolio.png",
-        "category": "full-stack",
-        "links": {
-            "view": "https://velmaredu.github.io/",
-            "code": "https://github.com/velmaredu/velmaredu.github.io"
-        }
-    },
-    {
         "name": "GhostCore Maps",
         "desc": "Website to search for electric chargers",
         "image": "gc-maps.webp",
         "category": "full-stack",
         "links": {
             "view": "https://maps.ghostcoretech.com/"
+        }
+    },
+    {
+        "name": "25 5 Clock",
+        "desc": "A Pomodoro clock developed with React.",
+        "image": "25-5-clock.webp",
+        "category": "full-stack",
+        "links": {
+            "view": "https://velmaredu.github.io/25-5-clock/",
+            "code": "https://github.com/velmaredu/25-5-clock"
+        }
+    },
+    {
+        "name": "Calculator",
+        "desc": "A calculator application developed with HTML, CSS, and JavaScript.",
+        "image": "calculator.png",
+        "category": "full-stack",
+        "links": {
+            "view": "https://velmaredu.github.io/calculator/",
+            "code": "https://github.com/velmaredu/calculator"
         }
     },
     {
@@ -29,13 +39,23 @@
         }
     },
     {
-        "name": "Calculator",
-        "desc": "A calculator application developed with HTML, CSS, and JavaScript.",
-        "image": "calculator.png",
+        "name": "Markdown Previewer",
+        "desc": "A markdown previewer developed with React.",
+        "image": "markdown-previewer.webp",
         "category": "full-stack",
         "links": {
-            "view": "https://velmaredu.github.io/calculator/",
-            "code": "https://github.com/velmaredu/calculator"
+            "view": "https://velmaredu.github.io/markdown-previewer/",
+            "code": "https://github.com/velmaredu/markdown-previewer"
+        }
+    },
+    {
+        "name": "Portfolio",
+        "desc": "My personal portfolio developed with HTML, CSS, and JS.",
+        "image": "portfolio.webp",
+        "category": "full-stack",
+        "links": {
+            "view": "https://velmaredu.github.io/",
+            "code": "https://github.com/velmaredu/velmaredu.github.io"
         }
     }
 ]
