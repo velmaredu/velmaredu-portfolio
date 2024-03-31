@@ -51,7 +51,7 @@
           left: calc(100% - var(--circle-diameter) / 2);
         }
 
-        >a {
+        >.card {
           margin-right: 10%;
         }
       }
@@ -64,7 +64,7 @@
           left: calc(0% - var(--circle-diameter) / 2);
         }
 
-        >a {
+        >.card {
           margin-left: 10%;
         }
       }
@@ -85,7 +85,7 @@
         display: none;
       }
 
-      a {
+      .card {
         flex-direction: row;
         margin: 0;
       }
