@@ -4,15 +4,13 @@
   flex-direction: column;
 
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60vh, 1fr));
     gap: 2rem;
 
     a {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       overflow: hidden;
       border-radius: 1rem;
       background-color: var(--bunker-950);
@@ -48,6 +46,16 @@
           font-weight: bold;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #education .container a {
+    flex-wrap: wrap;
+
+    img {
+      max-height: none;
     }
   }
 }
