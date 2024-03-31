@@ -52,22 +52,40 @@ const formatDate = (date: string | undefined): string => {
 };
 ---
 
-<a
-  class={`card ${experience.link ? "linked" : ""} ${side} noreveal`}
-  href={experience.link ?? null}
-  target='_blank'
-  rel='noopener noreferer nofollow'
->
-  <slot />
-  <div class='card-content'>
-    <h4>{experience.role}</h4>
-    <h6>{experience.name}</h6>
-    <p>
-      {formatDate(experience.start)} - {formatDate(experience.end)}<br />
-      {getDurationInYearMonths(experience.start, experience.end)}
-    </p>
-  </div>
-</a>
+{
+  experience.link ? (
+    <a
+      class={`card ${experience.link ? "linked" : ""} ${side} noreveal`}
+      href={experience.link ?? null}
+      target='_blank'
+      rel='noopener noreferer nofollow'
+    >
+      <slot />
+      <div class='card-content'>
+        <h4>{experience.role}</h4>
+        <h6>{experience.name}</h6>
+        <p>
+          {formatDate(experience.start)} - {formatDate(experience.end)}
+          <br />
+          {getDurationInYearMonths(experience.start, experience.end)}
+        </p>
+      </div>
+    </a>
+  ) : (
+    <div class={`card ${experience.link ? "linked" : ""} ${side} noreveal`}>
+      <slot />
+      <div class='card-content'>
+        <h4>{experience.role}</h4>
+        <h6>{experience.name}</h6>
+        <p>
+          {formatDate(experience.start)} - {formatDate(experience.end)}
+          <br />
+          {getDurationInYearMonths(experience.start, experience.end)}
+        </p>
+      </div>
+    </div>
+  )
+}
 <style>
   .card {
     display: flex;
