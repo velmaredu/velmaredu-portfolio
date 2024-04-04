@@ -5,7 +5,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60vh, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
     a {
@@ -23,7 +23,6 @@
       }
 
       img {
-        max-height: 50vh;
         width: auto;
         object-fit: cover;
       }
@@ -47,6 +46,12 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  #education .container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
