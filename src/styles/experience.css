@@ -72,6 +72,12 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  #experience .timeline::before {
+    background: var(--bunker-400);
+  }
+}
+
 @media (max-width: 1024px) {
   #experience .timeline .experience-row {
 

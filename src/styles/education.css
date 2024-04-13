@@ -49,6 +49,18 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  #education .container a {
+    &:hover {
+      box-shadow: 0 0 10px black;
+    }
+
+    .content h5 {
+      color: white;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   #education .container {
     grid-template-columns: repeat(1, 1fr);

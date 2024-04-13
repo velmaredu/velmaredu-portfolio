@@ -51,4 +51,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       transform: scale(1.03);
     }
   }
+
+  @media (prefers-color-scheme: light) {
+    .card {
+      &:hover {
+        box-shadow: 0 0 20px var(--bunker-500);
+      }
+      h6 {
+        color: white;
+      }
+    }
+    .card h6 {
+      color: white;
+    }
+  }
 </style>
