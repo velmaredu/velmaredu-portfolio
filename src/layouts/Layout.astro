@@ -190,6 +190,17 @@ const { title, description } = Astro.props;
     filter: blur(5px);
   }
 
+  @media (prefers-color-scheme: light) {
+    button,
+    .btn {
+      color: white;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
   @keyframes reveal {
     from {
       opacity: 0;

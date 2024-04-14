@@ -89,6 +89,19 @@ header {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  header {
+    a {
+      color: rgb(190, 190, 190);
+    }
+
+    a:hover,
+    nav a:hover:not(.active) {
+      color: black;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   header {
     nav {

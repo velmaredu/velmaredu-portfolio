@@ -132,6 +132,12 @@ const formatDate = (date: string | undefined): string => {
     }
   }
 
+  @media (prefers-color-scheme: light) {
+    .card.linked:hover {
+      box-shadow: 0 0 10px black;
+    }
+  }
+
   @media (max-width: 768px) {
     .card {
       flex-direction: column !important;
