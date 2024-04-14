@@ -29,17 +29,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 10% 5%;
+    padding: 10%;
     cursor: pointer;
     border-radius: 1rem;
     box-shadow: 0 0 20px var(--bunker-950);
     background: var(--bunker-950);
     transition: 0.3s;
     gap: 15%;
-    aspect-ratio: 1/1;
 
     img {
-      height: 65%;
+      flex-grow: 1;
+      max-width: 100%;
+      width: auto;
     }
 
     h6 {
