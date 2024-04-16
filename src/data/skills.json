@@ -1,47 +1,58 @@
 [
     {
         "name": "HTML5",
-        "icon": "HTML5"
+        "icon": "HTML5",
+        "category": "Frontend"
     },
     {
         "name": "CSS3",
-        "icon": "CSS"
+        "icon": "CSS",
+        "category": "Frontend"
     },
     {
         "name": "JavaScript",
-        "icon": "JavaScript"
+        "icon": "JavaScript",
+        "category": "Frontend"
     },
     {
         "name": "TypeScript",
-        "icon": "TypeScript"
+        "icon": "TypeScript",
+        "category": "Frontend"
     },
     {
         "name": "ReactJS",
-        "icon": "React"
+        "icon": "React",
+        "category": "Frontend"
     },
     {
         "name": "Redux",
-        "icon": "Redux"
+        "icon": "Redux",
+        "category": "Frontend"
     },
     {
         "name": "Astro",
-        "icon": "Astro"
+        "icon": "Astro",
+        "category": "Frontend"
     },
     {
         "name": "Tailwind",
-        "icon": "Tailwind"
+        "icon": "Tailwind",
+        "category": "Frontend"
     },
     {
         "name": "Sass",
-        "icon": "Sass"
+        "icon": "Sass",
+        "category": "Frontend"
     },
     {
         "name": "Bootstrap",
-        "icon": "Bootstrap"
+        "icon": "Bootstrap",
+        "category": "Frontend"
     },
     {
         "name": "C#",
-        "icon": "CSharp"
+        "icon": "CSharp",
+        "category": "Backend"
     },
     {
         "name": "Kubernetes",
@@ -53,66 +64,82 @@
     },
     {
         "name": "Angular",
-        "icon": "Angular"
+        "icon": "Angular",
+        "category": "Frontend"
     },
     {
         "name": "NodeJS",
-        "icon": "NodeJS"
+        "icon": "NodeJS",
+        "category": "Backend"
     },
     {
         "name": "Java",
-        "icon": "Java"
+        "icon": "Java",
+        "category": "Backend"
     },
     {
         "name": "Firebase",
-        "icon": "Firebase"
+        "icon": "Firebase",
+        "category": "Database"
     },
     {
         "name": "PHP",
-        "icon": "Php"
+        "icon": "Php",
+        "category": "Backend"
     },
     {
         "name": "Python",
-        "icon": "Python"
+        "icon": "Python",
+        "category": "Backend"
     },
     {
         "name": "C++",
-        "icon": "C++"
+        "icon": "C++",
+        "category": "Backend"
     },
     {
         "name": "MySQL",
-        "icon": "MySQL"
+        "icon": "MySQL",
+        "category": "Database"
     },
     {
         "name": "PostgreSQL",
-        "icon": "PostgreSQL"
+        "icon": "PostgreSQL",
+        "category": "Database"
     },
     {
         "name": "jQuery",
-        "icon": "JQueryDark"
+        "icon": "JQuery",
+        "category": "Frontend"
     },
     {
         "name": "Git VCS",
-        "icon": "Git"
+        "icon": "Git",
+        "category": "Other"
     },
     {
         "name": "Jenkins",
-        "icon": "Jenkins"
+        "icon": "Jenkins",
+        "category": "Other"
     },
     {
         "name": "Atlassian",
-        "icon": "Atlassian"
+        "icon": "Atlassian",
+        "category": "Other"
     },
     {
         "name": "Kotlin",
-        "icon": "Kotlin"
+        "icon": "Kotlin",
+        "category": "Other"
     },
     {
         "name": "Photoshop",
-        "icon": "Photoshop"
+        "icon": "Photoshop",
+        "category": "Other"
     },
     {
         "name": "Illustrator",
-        "icon": "Illustrator"
+        "icon": "Illustrator",
+        "category": "Other"
     }
 ]

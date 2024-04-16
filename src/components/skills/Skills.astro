@@ -1,7 +1,7 @@
 ---
-import skillsData from "@/data/skills.json";
 import "@/styles/skills.css";
-import SkillCard from "./SkillCard.astro";
+import { SkillCategory } from "@/types";
+import SkillsContainer from "./SkillsContainer.astro";
 ---
 
 <section id='skills'>
@@ -9,15 +9,8 @@ import SkillCard from "./SkillCard.astro";
     <ion-icon name='laptop-outline'></ion-icon>
     Skills
   </h2>
-  <div id='skillsContainer'>
-    {
-      skillsData.map((skill) => (
-        <SkillCard
-          name={skill.name}
-          imagePath={`/src/icons/${skill.icon}.svg`}
-          altText={skill.name}
-        />
-      ))
-    }
-  </div>
+  <SkillsContainer skillCategory={SkillCategory.FRONTEND} />
+  <SkillsContainer skillCategory={SkillCategory.BACKEND} />
+  <SkillsContainer skillCategory={SkillCategory.DATABASE} />
+  <SkillsContainer skillCategory={SkillCategory.OTHER} />
 </section>
