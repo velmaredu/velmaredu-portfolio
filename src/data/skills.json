@@ -56,11 +56,13 @@
     },
     {
         "name": "Kubernetes",
-        "icon": "Kubernetes"
+        "icon": "Kubernetes",
+        "category": "Other"
     },
     {
         "name": "Docker",
-        "icon": "Docker"
+        "icon": "Docker",
+        "category": "Other"
     },
     {
         "name": "Angular",
