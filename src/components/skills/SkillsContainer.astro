@@ -1,0 +1,56 @@
+---
+import skillsData from "@/data/skills.json";
+import { SkillCategory } from "@/types";
+import SkillCard from "./SkillCard.astro";
+
+interface Props {
+  skillCategory: SkillCategory;
+}
+
+const { skillCategory: skillType } = Astro.props;
+---
+
+<div class='skillsContainer'>
+  <h3 class='title reveal'>{skillType}</h3>
+  <div id='skillsCardContainer'>
+    {
+      skillsData
+        .filter((skill) => skill.category === skillType)
+        .map((skill) => (
+          <SkillCard
+            name={skill.name}
+            imagePath={`/src/icons/${skill.icon}.svg`}
+            altText={skill.name}
+          />
+        ))
+    }
+  </div>
+</div>
+<style>
+  .skillsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3vh;
+
+    .title {
+      font-weight: bold;
+      color: var(--earth-yellow);
+    }
+
+    #skillsCardContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20vh, 1fr));
+      grid-auto-rows: 20vh;
+      justify-content: center;
+      width: 100%;
+      gap: 3vh;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .skillsContainer #skillsCardContainer {
+      grid-template-columns: repeat(auto-fill, minmax(15vh, 1fr));
+    }
+  }
+</style>

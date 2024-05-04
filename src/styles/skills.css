@@ -2,21 +2,4 @@
 
 #skills {
   flex-direction: column;
-
-  #skillsContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20vh, 1fr));
-    grid-auto-rows: 20vh;
-    justify-content: center;
-    width: 100%;
-    gap: 3vh;
-  }
-}
-
-@media (max-width: 640px) {
-  #skills {
-    #skillsContainer {
-      grid-template-columns: repeat(auto-fill, minmax(15vh, 1fr));
-    }
-  }
 }

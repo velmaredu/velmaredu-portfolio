@@ -7,7 +7,7 @@ export type Project = {
     view: string;
     code?: string;
   };
-}
+};
 
 export type Experience = {
   name: string;
@@ -23,3 +23,9 @@ export enum Side {
   left = "left",
 }
 
+export enum SkillCategory {
+  FRONTEND = "Frontend",
+  BACKEND = "Backend",
+  DATABASE = "Database",
+  OTHER = "Other",
+}
