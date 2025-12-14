@@ -24,7 +24,7 @@ const width = phrases.reduce((max, phrase) => Math.max(max, phrase.length), 0);
       super();
 
       const phrases = this.dataset.phrases?.split(",") || [];
-      var typed = new Typed(".typing-text", {
+      new Typed(".typing-text", {
         strings: phrases,
         loop: true,
         typeSpeed: 40,
